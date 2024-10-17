@@ -1,0 +1,2564 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Istanbul Journeys-Itinerary</title>
+    <link href="pictures/icon.png" rel="icon" />
+    <link href="WebSite.css" rel="stylesheet" />
+  </head>
+  <script
+    src="https://kit.fontawesome.com/471de5d1b2.js"
+    crossorigin="anonymous"
+  ></script>
+  <body
+    style="
+      height: max-content;
+      max-width: 100vw;
+      margin: 0px;
+      background-color: #fff2df;
+      position: relative;
+      padding-bottom: 300px;
+    "
+    id="bod"
+  >
+    <div class="footer" style="z-index: 10; position: absolute; bottom: 0px">
+      <span
+        style="
+          border: #cbd2d2 solid 0.5px;
+          border-radius: 80px;
+          padding: 4px;
+          margin: 5px;
+          padding-left: 8px;
+          padding-right: 8px;
+        "
+        >C</span
+      >2023 made with love by Yasmine Zerai xoxo
+    </div>
+    <div
+      class="header"
+      style="background-image: url('/pictures/istanbul-5.jpg')"
+    >
+      <div class="navbar" id="navi" style="position: fixed">
+        <a class="logo" href="home.html" target="_self">Istanbul Journeys</a>
+        <div class="navbarItems">
+          <ul class="accordion" id="acc1">
+            <li class="menu-item">
+              <a
+                href="landmarks.html"
+                style="text-decoration: none; color: #cbd2d2"
+                ><hr class="line" />
+                Landmarks
+                <hr class="line"
+              /></a>
+            </li>
+
+            <li class="menu-item">
+              <a
+                href="itinerary.html"
+                style="text-decoration: none; color: #cbd2d2"
+                >Perfect Itinerary
+                <hr class="line"
+              /></a>
+            </li>
+            <li class="menu-item">
+              <a
+                href="daytrips.html"
+                style="text-decoration: none; color: #cbd2d2"
+                >Day Trips From Istanbul
+                <hr class="line"
+              /></a>
+            </li>
+            <li class="menu-item">
+              <a href="food.html" style="text-decoration: none; color: #cbd2d2"
+                >Culinary Adventures
+                <hr class="line" />
+              </a>
+            </li>
+          </ul>
+
+          <button
+            class="item"
+            onclick="openList()"
+            style="
+              font-size: 1rem;
+              font-weight: bold;
+              font-family: 'Poiret One', cursive;
+              color: rgb(203, 210, 210);
+              text-decoration-line: none;
+              text-transform: uppercase;
+              letter-spacing: 1px;
+              background-color: #310e3100;
+              border: #310e31e1;
+            "
+          >
+            menu
+          </button>
+          <a
+            href="about us.html"
+            class="item"
+            style="text-decoration: none; color: #cbd2d2"
+            >about us</a
+          >
+          <button class="item navbutton" onclick="openSubs()">subscribe</button>
+          <button class="item navbutton" onclick="openLog()">log in</button>
+        </div>
+
+        <i class="fa-solid fa-bars" id="icon" onclick="openList2()"></i>
+        <ul class="accordion" style="right: 5vw" id="acc2">
+          <li class="menu-item">
+            <a
+              href="landmarks.html"
+              style="text-decoration: none; color: #cbd2d2"
+              ><hr class="line" />
+              Landmarks
+              <hr class="line"
+            /></a>
+          </li>
+
+          <li class="menu-item">
+            <a
+              href="itinerary.html"
+              style="text-decoration: none; color: #cbd2d2"
+              >Perfect Itinerary
+              <hr class="line"
+            /></a>
+          </li>
+          <li class="menu-item">
+            <a
+              href="daytrips.html"
+              style="text-decoration: none; color: #cbd2d2"
+              >Day Trips From Istanbul
+              <hr class="line"
+            /></a>
+          </li>
+          <li class="menu-item">
+            <a href="food.html" style="text-decoration: none; color: #cbd2d2"
+              >Culinary Adventures
+              <hr class="line" />
+            </a>
+          </li>
+          <li class="menu-item" onclick="openSubs()">
+            subscribe
+            <hr class="line" />
+          </li>
+          <li class="menu-item" onclick="openLog()">
+            log in
+            <hr class="line" />
+          </li>
+          <li class="menu-item">
+            <a
+              href="about us.html"
+              style="text-decoration: none; color: #cbd2d2"
+              >
+              About us
+              <hr class="line"
+            /></a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <div
+          class="bigText"
+          style="
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 50px;
+            gap: 30px;
+          "
+        >
+          Where East meets West, <br />
+          Istanbul enchants every traveler's soul
+        </div>
+      </div>
+    </div>
+    <div class="subscription-popup" id="subs">
+      <div>
+        <form class="formulaire" onsubmit="submitForm(event)">
+          <div
+            style="
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+            "
+          >
+            <div
+              class="form-text"
+              style="font-size: 1.7rem; text-align: center"
+            >
+              SUBSCRIBE NOW FOR FREE!
+            </div>
+            <br />
+          </div>
+          <div><input type="text" class="fill" placeholder="FirstName" /></div>
+          <div><input type="text" class="fill" placeholder="LastName" /></div>
+          <div><input type="text" class="fill" placeholder="Occupation" /></div>
+          <div><input type="email" class="fill" placeholder="email" /></div>
+          <div>
+            <div class="form-text" style="text-align: center">Birthday</div>
+            <input type="date" class="fill" />
+          </div>
+          <div>
+            <div class="form-text" style="text-align: center">Nationality</div>
+            <select
+              class="fill"
+              style="padding-top: 5px"
+              id="country"
+              onmousedown="if(this.options.length>5){this.size=5}"
+              onchange="this.blur()"
+              onblur="this.removeAttribute('size')"
+            >
+              <option>select country</option>
+              <option value="AF">Afghanistan</option>
+              <option value="AX">Aland Islands</option>
+              <option value="AL">Albania</option>
+              <option value="DZ">Algeria</option>
+              <option value="AS">American Samoa</option>
+              <option value="AD">Andorra</option>
+              <option value="AO">Angola</option>
+              <option value="AI">Anguilla</option>
+              <option value="AQ">Antarctica</option>
+              <option value="AG">Antigua and Barbuda</option>
+              <option value="AR">Argentina</option>
+              <option value="AM">Armenia</option>
+              <option value="AW">Aruba</option>
+              <option value="AU">Australia</option>
+              <option value="AT">Austria</option>
+              <option value="AZ">Azerbaijan</option>
+              <option value="BS">Bahamas</option>
+              <option value="BH">Bahrain</option>
+              <option value="BD">Bangladesh</option>
+              <option value="BB">Barbados</option>
+              <option value="BY">Belarus</option>
+              <option value="BE">Belgium</option>
+              <option value="BZ">Belize</option>
+              <option value="BJ">Benin</option>
+              <option value="BM">Bermuda</option>
+              <option value="BT">Bhutan</option>
+              <option value="BO">Bolivia</option>
+              <option value="BQ">Bonaire, Sint Eustatius and Saba</option>
+              <option value="BA">Bosnia and Herzegovina</option>
+              <option value="BW">Botswana</option>
+              <option value="BV">Bouvet Island</option>
+              <option value="BR">Brazil</option>
+              <option value="IO">British Indian Ocean Territory</option>
+              <option value="BN">Brunei Darussalam</option>
+              <option value="BG">Bulgaria</option>
+              <option value="BF">Burkina Faso</option>
+              <option value="BI">Burundi</option>
+              <option value="KH">Cambodia</option>
+              <option value="CM">Cameroon</option>
+              <option value="CA">Canada</option>
+              <option value="CV">Cape Verde</option>
+              <option value="KY">Cayman Islands</option>
+              <option value="CF">Central African Republic</option>
+              <option value="TD">Chad</option>
+              <option value="CL">Chile</option>
+              <option value="CN">China</option>
+              <option value="CX">Christmas Island</option>
+              <option value="CC">Cocos (Keeling) Islands</option>
+              <option value="CO">Colombia</option>
+              <option value="KM">Comoros</option>
+              <option value="CG">Congo</option>
+              <option value="CD">
+                Congo, Democratic Republic of the Congo
+              </option>
+              <option value="CK">Cook Islands</option>
+              <option value="CR">Costa Rica</option>
+              <option value="CI">Cote D'Ivoire</option>
+              <option value="HR">Croatia</option>
+              <option value="CU">Cuba</option>
+              <option value="CW">Curacao</option>
+              <option value="CY">Cyprus</option>
+              <option value="CZ">Czech Republic</option>
+              <option value="DK">Denmark</option>
+              <option value="DJ">Djibouti</option>
+              <option value="DM">Dominica</option>
+              <option value="DO">Dominican Republic</option>
+              <option value="EC">Ecuador</option>
+              <option value="EG">Egypt</option>
+              <option value="SV">El Salvador</option>
+              <option value="GQ">Equatorial Guinea</option>
+              <option value="ER">Eritrea</option>
+              <option value="EE">Estonia</option>
+              <option value="ET">Ethiopia</option>
+              <option value="FK">Falkland Islands (Malvinas)</option>
+              <option value="FO">Faroe Islands</option>
+              <option value="FJ">Fiji</option>
+              <option value="FI">Finland</option>
+              <option value="FR">France</option>
+              <option value="GF">French Guiana</option>
+              <option value="PF">French Polynesia</option>
+              <option value="TF">French Southern Territories</option>
+              <option value="GA">Gabon</option>
+              <option value="GM">Gambia</option>
+              <option value="GE">Georgia</option>
+              <option value="DE">Germany</option>
+              <option value="GH">Ghana</option>
+              <option value="GI">Gibraltar</option>
+              <option value="GR">Greece</option>
+              <option value="GL">Greenland</option>
+              <option value="GD">Grenada</option>
+              <option value="GP">Guadeloupe</option>
+              <option value="GU">Guam</option>
+              <option value="GT">Guatemala</option>
+              <option value="GG">Guernsey</option>
+              <option value="GN">Guinea</option>
+              <option value="GW">Guinea-Bissau</option>
+              <option value="GY">Guyana</option>
+              <option value="HT">Haiti</option>
+              <option value="HM">Heard Island and Mcdonald Islands</option>
+              <option value="VA">Holy See (Vatican City State)</option>
+              <option value="HN">Honduras</option>
+              <option value="HK">Hong Kong</option>
+              <option value="HU">Hungary</option>
+              <option value="IS">Iceland</option>
+              <option value="IN">India</option>
+              <option value="ID">Indonesia</option>
+              <option value="IR">Iran, Islamic Republic of</option>
+              <option value="IQ">Iraq</option>
+              <option value="IE">Ireland</option>
+              <option value="IM">Isle of Man</option>
+              <option value="IL">Israel</option>
+              <option value="IT">Italy</option>
+              <option value="JM">Jamaica</option>
+              <option value="JP">Japan</option>
+              <option value="JE">Jersey</option>
+              <option value="JO">Jordan</option>
+              <option value="KZ">Kazakhstan</option>
+              <option value="KE">Kenya</option>
+              <option value="KI">Kiribati</option>
+              <option value="KP">Korea, Democratic People's Republic of</option>
+              <option value="KR">Korea, Republic of</option>
+              <option value="XK">Kosovo</option>
+              <option value="KW">Kuwait</option>
+              <option value="KG">Kyrgyzstan</option>
+              <option value="LA">Lao People's Democratic Republic</option>
+              <option value="LV">Latvia</option>
+              <option value="LB">Lebanon</option>
+              <option value="LS">Lesotho</option>
+              <option value="LR">Liberia</option>
+              <option value="LY">Libyan Arab Jamahiriya</option>
+              <option value="LI">Liechtenstein</option>
+              <option value="LT">Lithuania</option>
+              <option value="LU">Luxembourg</option>
+              <option value="MO">Macao</option>
+              <option value="MK">
+                Macedonia, the Former Yugoslav Republic of
+              </option>
+              <option value="MG">Madagascar</option>
+              <option value="MW">Malawi</option>
+              <option value="MY">Malaysia</option>
+              <option value="MV">Maldives</option>
+              <option value="ML">Mali</option>
+              <option value="MT">Malta</option>
+              <option value="MH">Marshall Islands</option>
+              <option value="MQ">Martinique</option>
+              <option value="MR">Mauritania</option>
+              <option value="MU">Mauritius</option>
+              <option value="YT">Mayotte</option>
+              <option value="MX">Mexico</option>
+              <option value="FM">Micronesia, Federated States of</option>
+              <option value="MD">Moldova, Republic of</option>
+              <option value="MC">Monaco</option>
+              <option value="MN">Mongolia</option>
+              <option value="ME">Montenegro</option>
+              <option value="MS">Montserrat</option>
+              <option value="MA">Morocco</option>
+              <option value="MZ">Mozambique</option>
+              <option value="MM">Myanmar</option>
+              <option value="NA">Namibia</option>
+              <option value="NR">Nauru</option>
+              <option value="NP">Nepal</option>
+              <option value="NL">Netherlands</option>
+              <option value="AN">Netherlands Antilles</option>
+              <option value="NC">New Caledonia</option>
+              <option value="NZ">New Zealand</option>
+              <option value="NI">Nicaragua</option>
+              <option value="NE">Niger</option>
+              <option value="NG">Nigeria</option>
+              <option value="NU">Niue</option>
+              <option value="NF">Norfolk Island</option>
+              <option value="MP">Northern Mariana Islands</option>
+              <option value="NO">Norway</option>
+              <option value="OM">Oman</option>
+              <option value="PK">Pakistan</option>
+              <option value="PW">Palau</option>
+              <option value="PS">Palestinian Territory, Occupied</option>
+              <option value="PA">Panama</option>
+              <option value="PG">Papua New Guinea</option>
+              <option value="PY">Paraguay</option>
+              <option value="PE">Peru</option>
+              <option value="PH">Philippines</option>
+              <option value="PN">Pitcairn</option>
+              <option value="PL">Poland</option>
+              <option value="PT">Portugal</option>
+              <option value="PR">Puerto Rico</option>
+              <option value="QA">Qatar</option>
+              <option value="RE">Reunion</option>
+              <option value="RO">Romania</option>
+              <option value="RU">Russian Federation</option>
+              <option value="RW">Rwanda</option>
+              <option value="BL">Saint Barthelemy</option>
+              <option value="SH">Saint Helena</option>
+              <option value="KN">Saint Kitts and Nevis</option>
+              <option value="LC">Saint Lucia</option>
+              <option value="MF">Saint Martin</option>
+              <option value="PM">Saint Pierre and Miquelon</option>
+              <option value="VC">Saint Vincent and the Grenadines</option>
+              <option value="WS">Samoa</option>
+              <option value="SM">San Marino</option>
+              <option value="ST">Sao Tome and Principe</option>
+              <option value="SA">Saudi Arabia</option>
+              <option value="SN">Senegal</option>
+              <option value="RS">Serbia</option>
+              <option value="CS">Serbia and Montenegro</option>
+              <option value="SC">Seychelles</option>
+              <option value="SL">Sierra Leone</option>
+              <option value="SG">Singapore</option>
+              <option value="SX">Sint Maarten</option>
+              <option value="SK">Slovakia</option>
+              <option value="SI">Slovenia</option>
+              <option value="SB">Solomon Islands</option>
+              <option value="SO">Somalia</option>
+              <option value="ZA">South Africa</option>
+              <option value="GS">
+                South Georgia and the South Sandwich Islands
+              </option>
+              <option value="SS">South Sudan</option>
+              <option value="ES">Spain</option>
+              <option value="LK">Sri Lanka</option>
+              <option value="SD">Sudan</option>
+              <option value="SR">Suriname</option>
+              <option value="SJ">Svalbard and Jan Mayen</option>
+              <option value="SZ">Swaziland</option>
+              <option value="SE">Sweden</option>
+              <option value="CH">Switzerland</option>
+              <option value="SY">Syrian Arab Republic</option>
+              <option value="TW">Taiwan, Province of China</option>
+              <option value="TJ">Tajikistan</option>
+              <option value="TZ">Tanzania, United Republic of</option>
+              <option value="TH">Thailand</option>
+              <option value="TL">Timor-Leste</option>
+              <option value="TG">Togo</option>
+              <option value="TK">Tokelau</option>
+              <option value="TO">Tonga</option>
+              <option value="TT">Trinidad and Tobago</option>
+              <option value="TN">Tunisia</option>
+              <option value="TR">Turkey</option>
+              <option value="TM">Turkmenistan</option>
+              <option value="TC">Turks and Caicos Islands</option>
+              <option value="TV">Tuvalu</option>
+              <option value="UG">Uganda</option>
+              <option value="UA">Ukraine</option>
+              <option value="AE">United Arab Emirates</option>
+              <option value="GB">United Kingdom</option>
+              <option value="US">United States</option>
+              <option value="UM">United States Minor Outlying Islands</option>
+              <option value="UY">Uruguay</option>
+              <option value="UZ">Uzbekistan</option>
+              <option value="VU">Vanuatu</option>
+              <option value="VE">Venezuela</option>
+              <option value="VN">Viet Nam</option>
+              <option value="VG">Virgin Islands, British</option>
+              <option value="VI">Virgin Islands, U.s.</option>
+              <option value="WF">Wallis and Futuna</option>
+              <option value="EH">Western Sahara</option>
+              <option value="YE">Yemen</option>
+              <option value="ZM">Zambia</option>
+              <option value="ZW">Zimbabwe</option>
+            </select>
+          </div>
+          <div>
+            <input
+              type="password"
+              class="fill"
+              placeholder="password"
+              id="pass"
+            />
+          </div>
+          <div>
+            <input
+              type="password"
+              class="fill"
+              placeholder="password check"
+              id="passCheck"
+            />
+          </div>
+          <div
+            class="mask"
+            style="
+              font-size: 1.2rem;
+              color: red;
+              text-shadow: #000000;
+              font-family: 'Amaranth', sans-serif;
+            "
+            id="passAlert"
+          >
+            please check the password
+          </div>
+          <div style="color: white; font-weight: bold; font-size: 1.2rem">
+            Already got an account ?
+            <span
+              ><a class="subscribe" href="#" onclick="openLog(); closeSubs()"
+                >Log in !</a
+              ></span
+            >
+          </div>
+          <div
+            style="
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              gap: 50px;
+              margin-top: 50px;
+            "
+          >
+            <button type="submit" class="form-button" onclick="passwordCheck()">
+              Submit
+            </button>
+            <button class="form-button" onclick="closeSubs()">Close</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="subscription-popup" id="log">
+      <div>
+        <form
+          class="formulaire"
+          style="height: 500px; width: 400px"
+          onsubmit="submitForm(event)"
+        >
+          <div
+            style="
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+            "
+          >
+            <div
+              class="form-text"
+              style="font-size: 1.7rem; text-align: center"
+            >
+              Welcome Back !
+            </div>
+            <br />
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 20px">
+            <div>
+              <input
+                type="email"
+                class="fill"
+                style="width: 250px"
+                placeholder="email"
+              />
+            </div>
+
+            <div>
+              <input
+                type="password"
+                class="fill"
+                placeholder="password"
+                style="width: 250px"
+              />
+            </div>
+          </div>
+          <div style="color: white; font-weight: bold; font-size: 1.2rem">
+            Don't have an account ?
+            <span
+              ><a class="subscribe" href="#" onclick="openSubs(); closeLog()"
+                >subscribe now !</a
+              ></span
+            >
+          </div>
+
+          <div
+            style="
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              gap: 50px;
+              margin-top: 50px;
+            "
+          >
+            <button type="submit" class="form-button">Log In</button>
+            <button class="form-button" onclick="closeLog()">Close</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div>
+      <ul class="menu-selection" id="selec">
+        <li class="selector-item " onclick="basculer(5,0)">
+          <a>Landmarks</a>
+          <hr class="selector-item-line " />
+        </li>
+
+        <li class="selector-item selected" onclick="basculer(6,1)">
+          <a> Perfect Itinerary</a>
+          <hr class="selector-item-line selected-line" />
+        </li>
+        <li class="selector-item" onclick="basculer(7,2)">
+          <a> Day Trips</a>
+          <hr class="selector-item-line" />
+        </li>
+        <li class="selector-item" onclick="basculer(8,3)">
+          <a>Culinary Adventures</a>
+          <hr class="selector-item-line" />
+        </li>
+      </ul>
+      <ul class="menu-selection mask"  id="selec2">
+        <li class="selector-item selected" onclick="basculer2(5,0)">
+          <a><span class="mask">Landmarks</span><span class="dot2" style="background-color: #b74141;"></span></a>
+          <hr class="selector-item-line selected-line mask" />
+        </li>
+
+        <li class="selector-item selected"onclick="basculer2(6,1)">
+          <a><span > Best Itinerary</span><span class="dot2 mask" style="background-color: #b74141;" ></span></a>
+          <hr class="selector-item-line selected-line " />
+        </li>
+        <li class="selector-item selected" onclick="basculer2(7,2)">
+          <a> <span class="mask">Day Trips</span><span class="dot2" style="background-color: #b74141;"></span></a>
+          <hr class="selector-item-line selected-line mask" />
+        </li>
+        <li class="selector-item selected" onclick="basculer2(8,3)">
+          <a><span class="mask">Best Food</span><span class="dot2" style="background-color: #b74141;"></span></a>
+          <hr class="selector-item-line selected-line mask" />
+        </li>
+      </ul>
+    </div>
+    <div class="landmarks mask" id="land">
+      <div class="landmark-card">
+        <div
+          class="landmark-card-pic"
+          style="background-image: url('/pictures/cistern.jpg')"
+        ></div>
+        <div class="landmark-name">Basilica Cistern</div>
+        <div class="landmark-description">
+          <span class="subtitle">Description : </span>An underground marvel, the
+          Basilica Cistern features ancient columns and an eerie, serene
+          ambiance created by dim lighting and water.<span
+            class="read-more-text read-more-button"
+          >
+            Beneath the bustling streets of Istanbul lies a hidden world of
+            ancient engineering and mystique known as the Basilica Cistern. This
+            colossal underground reservoir, dating back to the Byzantine era,
+            consists of a mesmerizing forest of marble columns supporting its
+            cavernous expanse. As you descend into its dimly lit depths, the
+            tranquil ambiance transports you to a different time. The cistern's
+            architecture, with its arched ceilings and strategically placed
+            columns, creates a unique visual rhythm that draws you in.</span
+          >
+          <br /><br />
+          <span class="subtitle">Location : </span> Sultanahmet Square, Old
+          City, Istanbul. ><br /><br />
+          <span class="subtitle">Tips : </span> Look for the Medusa head
+          columns, and consider visiting during hot summer days for a refreshing
+          escape from the heat.<span class="read-more-text read-more-button"
+            >Pause at the "wishing column," where tradition holds that tossing a
+            coin over your shoulder into the water guarantees your wish's
+            fulfillment.</span
+          >
+        </div>
+        <div style="display: flex; align-items: right">
+          <button
+            class="navbutton"
+            style="padding: 5px 10px"
+            onclick="ReadMore(0)"
+          >
+            Read More
+          </button>
+          <button
+            class="navbutton read-more-button"
+            style="padding: 5px 10px"
+            onclick="ShowLess(0)"
+          >
+            Show Less
+          </button>
+        </div>
+      </div>
+      <div class="landmark-card">
+        <div
+          class="landmark-card-pic"
+          style="background-image: url('/pictures/hagia-sophia-4.jpg')"
+        ></div>
+        <div class="landmark-name">Hagia Sophia (AyaSophia)</div>
+        <div class="landmark-description">
+          <span class="subtitle">Description : </span>A stunning architectural
+          marvel with a history spanning centuries, Hagia Sophia boasts an
+          iconic dome, intricate mosaics, and a blend of Byzantine and Ottoman
+          influences.<span class="read-more-text read-more-button"
+            >Its massive dome and intricate mosaics evoke awe and admiration,
+            showcasing the merging of art, religion, and engineering prowess.
+            Originally built as a cathedral in the 6th century, later
+            transformed into a mosque, and now a museum, Hagia Sophia's walls
+            bear the marks of history, its architecture a reflection of the
+            city's diverse tapestry.</span
+          >
+          <br /><br />
+          <span class="subtitle">Location : </span> Sultanahmet Square, Old
+          City, Istanbul.<br /><br />
+          <span class="subtitle">Tips : </span> Arrive early to avoid crowds,
+          and admire the mesmerizing play of light through the dome's windows.
+          <span class="read-more-text read-more-button"
+            >Allocate ample time to explore its vast interior, from the nave to
+            the galleries, to fully appreciate its historical layers and
+            architectural nuances.</span
+          >
+        </div>
+        <div style="display: flex; align-items: right">
+          <button
+            class="navbutton"
+            style="padding: 5px 10px"
+            onclick="ReadMore(1)"
+          >
+            Read More
+          </button>
+          <button
+            class="navbutton read-more-button"
+            style="padding: 5px 10px"
+            onclick="ShowLess(1)"
+          >
+            Show Less
+          </button>
+        </div>
+      </div>
+      <div class="landmark-card">
+        <div
+          class="landmark-card-pic"
+          style="background-image: url('/pictures/topkapi.jpg')"
+        ></div>
+        <div class="landmark-name">Topkapi Palace</div>
+        <div class="landmark-description">
+          <span class="subtitle">Description : </span>The opulent residence of
+          Ottoman sultans, Topkapi Palace showcases ornate chambers, lush
+          gardens, and a treasure trove of historical artifacts.
+          <span class="read-more-text read-more-button">
+            Nestled on the historic peninsula of Istanbul, Topkapi Palace is a
+            sprawling complex that echoes the opulent legacy of the Ottoman
+            Empire. This architectural masterpiece offers a window into the
+            lives of sultans and their courts. Its intricate courtyards, lavish
+            chambers, and lush gardens create an ambiance of regal grandeur,
+            while its museum displays reveal a treasure trove of artifacts, from
+            shimmering jewels to intricate manuscripts.</span
+          ><br /><br />
+          <span class="subtitle">Location : </span> Sultanahmet Square, Old
+          City, Istanbul.<br /><br />
+          <span class="subtitle">Tips : </span> Allocate ample time to explore
+          the palace's different sections, including the Harem and Imperial
+          Treasury.<span class="read-more-text read-more-button">
+            Take a leisurely stroll through the palace gardens, where the
+            serenity of nature contrasts with the opulence of the
+            interiors.</span
+          >
+        </div>
+        <div style="display: flex; align-items: right">
+          <button
+            class="navbutton"
+            style="padding: 5px 10px"
+            onclick="ReadMore(2)"
+          >
+            Read More
+          </button>
+          <button
+            class="navbutton read-more-button"
+            style="padding: 5px 10px"
+            onclick="ShowLess(2)"
+          >
+            Show Less
+          </button>
+        </div>
+      </div>
+      <div class="landmark-card">
+        <div
+          class="landmark-card-pic"
+          style="background-image: url('/pictures/galata2.jpg')"
+        ></div>
+        <div class="landmark-name">Galata Tower</div>
+        <div class="landmark-description">
+          <span class="subtitle">Description : </span>Offering panoramic views
+          of Istanbul's skyline and the Bosphorus, Galata Tower is an iconic
+          medieval structure.
+          <span class="read-more-text read-more-button"
+            >the tower has witnessed the ebb and flow of empires and cultures.
+            Its distinctive cylindrical shape and conical roof make it instantly
+            recognizable. From its lofty vantage point, visitors are rewarded
+            with breathtaking panoramic views of Istanbul's cityscape and the
+            shimmering waters of the Bosphorus.</span
+          ><br /><br />
+          <span class="subtitle">Location : </span> SGalata, Beyoglu,
+          Istanbul.<br /><br />
+          <span class="subtitle">Tips : </span> Visit during sunset for stunning
+          photos, and enjoy a leisurely stroll in the charming Galata
+          neighborhood.<span class="read-more-text read-more-button"
+            >As twilight descends, Galata Tower takes on a new charm as its
+            lights illuminate the night sky, casting a romantic glow over the
+            surrounding streets.</span
+          >
+        </div>
+        <div style="display: flex; align-items: right">
+          <button
+            class="navbutton"
+            style="padding: 5px 10px"
+            onclick="ReadMore(3)"
+          >
+            Read More
+          </button>
+          <button
+            class="navbutton read-more-button"
+            style="padding: 5px 10px"
+            onclick="ShowLess(3)"
+          >
+            Show Less
+          </button>
+        </div>
+      </div>
+      <div class="landmark-card">
+        <div
+          class="landmark-card-pic"
+          style="background-image: url('/pictures/dolmabahce.jpg')"
+        ></div>
+        <div class="landmark-name">Dolmabahçe Palace</div>
+        <div class="landmark-description">
+          <span class="subtitle">Description : </span>A blend of Ottoman and
+          European architecture, Dolmabahçe Palace is a sumptuous waterfront
+          residence showcasing exquisite interiors and gardens.
+          <span class="read-more-text read-more-button"
+            >Built in the 19th century, it stands as a symbol of the Ottoman
+            Empire's aspiration to modernize while preserving its heritage. The
+            palace's grand facades, ornate interiors, and splendid gardens
+            reflect the opulence and sophistication of the era, bearing witness
+            to the intersection of cultures and the legacy of the Ottoman
+            sultans.</span
+          ><br /><br />
+          <span class="subtitle">Location : </span> Besiktas, Istanbul.<br /><br />
+          <span class="subtitle">Tips : </span> Take a guided tour to explore
+          the palace's lavish rooms, and marvel at the Crystal Staircase and
+          Crystal Chandelier.<span class="read-more-text read-more-button"
+            >Stroll through the meticulously landscaped gardens and admire the
+            fountains that grace the palace grounds.</span
+          >
+        </div>
+        <div style="display: flex; align-items: right">
+          <button
+            class="navbutton"
+            style="padding: 5px 10px"
+            onclick="ReadMore(4)"
+          >
+            Read More
+          </button>
+          <button
+            class="navbutton read-more-button"
+            style="padding: 5px 10px"
+            onclick="ShowLess(4)"
+          >
+            Show Less
+          </button>
+        </div>
+      </div>
+      <div class="landmark-card">
+        <div
+          class="landmark-card-pic"
+          style="background-image: url('/pictures/bridge.jpg')"
+        ></div>
+        <div class="landmark-name">Bosphorus Bridge</div>
+        <div class="landmark-description">
+          <span class="subtitle">Description : </span>This suspension bridge
+          gracefully spans the Bosphorus Strait, uniting Europe and Asia in a
+          monumental feat of engineering.The bridge creates a majestic
+          silhouette against the backdrop of the city's skyline.
+          <span class="read-more-text read-more-button">
+            it's a symbol of Istanbul's continuity, where history and modernity
+            converge. Its majestic towers, sweeping cables, and the way it seems
+            to suspend across the water make it an engineering marvel and a
+            visual delight for those who traverse it or admire it from
+            afar.</span
+          >
+          <br /><br />
+          <span class="subtitle">Location : </span> Ortakoy to Beylerbeyi,
+          Istanbul.<br /><br />
+          <span class="subtitle">Tips : </span> Capture illuminated bridge at
+          night, explore both continents.<span
+            class="read-more-text read-more-button"
+            >Drive or walk across the bridge to experience awe-inspiring vistas
+            of the Bosphorus and the cityscape. Capture its grandeur from one of
+            the viewpoints on either side.</span
+          >
+        </div>
+        <div style="display: flex; align-items: right">
+          <button
+            class="navbutton"
+            style="padding: 5px 10px"
+            onclick="ReadMore(5)"
+          >
+            Read More
+          </button>
+          <button
+            class="navbutton read-more-button"
+            style="padding: 5px 10px"
+            onclick="ShowLess(5)"
+          >
+            Show Less
+          </button>
+        </div>
+      </div>
+      <div class="landmark-card">
+        <div
+          class="landmark-card-pic"
+          style="
+            background-image: url('/pictures/balat.jpg');
+            min-height: 250px;
+          "
+        ></div>
+        <div class="landmark-name">Balat</div>
+        <div class="landmark-description">
+          <span class="subtitle">Description : </span>the Balat neighborhood is
+          a hidden treasure that offers a glimpse into the city's diverse
+          cultural past. Its narrow, winding streets are lined with colorful
+          houses, each with its own character and charm.
+          <span class="read-more-text read-more-button"
+            >Its narrow lanes wind through a tapestry of cultures, showcasing
+            colorful houses adorned with intricate details. Balat's allure lies
+            in its ability to transport you to another era. The neighborhood's
+            mix of Ottoman, Jewish, Greek, and Armenian influences tells stories
+            of coexistence and cultural exchange, and its vibrant present adds
+            layers to its storied past.</span
+          ><br /><br />
+          <span class="subtitle">Location : </span>
+          European side of Istanbul, near the shores of the Golden Horn,
+          <br /><br />
+          <span class="subtitle">Tips : </span> Explore Balat's charm during the
+          day.<span class="read-more-text read-more-button">
+            Take a break at one of the neighborhood's cozy cafés, where modern
+            art, bohemian vibes, and traditional flavors intersect.</span
+          >
+        </div>
+        <div style="display: flex; align-items: right">
+          <button
+            class="navbutton"
+            style="padding: 5px 10px"
+            onclick="ReadMore(6)"
+          >
+            Read More
+          </button>
+          <button
+            class="navbutton read-more-button"
+            style="padding: 5px 10px"
+            onclick="ShowLess(6)"
+          >
+            Show Less
+          </button>
+        </div>
+      </div>
+      <div class="landmark-card">
+        <div
+          class="landmark-card-pic"
+          style="background-image: url('/pictures/istiklal.jpg')"
+        ></div>
+        <div class="landmark-name">Istiklal Avenue and Taksim Square</div>
+        <div class="landmark-description">
+          <span class="subtitle">Description : </span>Istiklal Avenue, a
+          bustling pedestrian street, is the heart of modern Istanbul. Lined
+          with historic buildings, shops, cafes, and entertainment venues, it
+          leads to Taksim Square.
+          <span class="read-more-text read-more-button"
+            >It is a historic gathering place that has witnessed both
+            celebrations and protests. The duo reflects Istanbul's transition
+            from its historical roots to a modern hub of creativity and
+            expression.</span
+          ><br /><br />
+          <span class="subtitle">Location : </span> Beyoglu, Istanbul.<br /><br />
+          <span class="subtitle">Tips : </span>Visit Istiklal Street and Taksim
+          Square early in the day to beat the crowds and make the most of the
+          vibrant shops, eateries, and attractions.<span
+            class="read-more-text read-more-button"
+            >Experience the transformation of the area after dark, when Istiklal
+            Street's lights illuminate the way and Taksim Square becomes a hub
+            of nightlife and social interaction.
+          </span>
+        </div>
+        <div style="display: flex; align-items: right">
+          <button
+            class="navbutton"
+            style="padding: 5px 10px"
+            onclick="ReadMore(7)"
+          >
+            Read More
+          </button>
+          <button
+            class="navbutton read-more-button"
+            style="padding: 5px 10px"
+            onclick="ShowLess(7)"
+          >
+            Show Less
+          </button>
+        </div>
+      </div>
+      <div class="landmark-card">
+        <div
+          class="landmark-card-pic"
+          style="background-image: url('/pictures/bazaar.jpg')"
+        ></div>
+        <div class="landmark-name">Grand Bazaar</div>
+        <div class="landmark-description">
+          <span class="subtitle">Description : </span>An enchanting maze of over
+          4,000 shops, the Grand Bazaar offers a sensory overload of textiles,
+          ceramics, spices, and more.
+          <span class="read-more-text read-more-button"
+            >With its labyrinthine alleys and bustling stalls, it's more than a
+            marketplace—it's a microcosm of Istanbul's rich heritage. Dating
+            back centuries, the bazaar's vibrant energy, fragrant spices,
+            intricate carpets, and gleaming jewelry create an immersive
+            experience that reflects the city's fusion of cultures and
+            commerce.</span
+          >
+          <br /><br />
+          <span class="subtitle">Location : </span>Beyazit Square, Old City,
+          Istanbul.<br /><br />
+          <span class="subtitle">Tips : </span> Bargain with vendors, get a map
+          to navigate the labyrinthine passages, and sample traditional Turkish
+          delights.
+          <span class="read-more-text read-more-button">
+            Discover more than just souvenirs; explore Ottoman-era architecture,
+            decorative arts, and even historical inns within the bazaar's
+            complex.</span
+          >
+        </div>
+        <div style="display: flex; align-items: right">
+          <button
+            class="navbutton"
+            style="padding: 5px 10px"
+            onclick="ReadMore(8)"
+          >
+            Read More
+          </button>
+          <button
+            class="navbutton read-more-button"
+            style="padding: 5px 10px"
+            onclick="ShowLess(8)"
+          >
+            Show Less
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="itinerary " id="iti" style="margin-top: 100px">
+      <button class="acc-button" onclick="OpenDay(1)">
+        Day 1: Arrival and Introduction to Sultanahmet
+      </button>
+      <div class="day-plan mask">
+        <div>
+          <span class="subtitle">Morning:</span>
+          Arrive at Istanbul Airport, where you'll be greeted by the city's
+          energy and rich history. After a smooth transfer to your hotel in
+          Sultanahmet, take a moment to settle in and refresh. <br />
+          <br /><span class="subtitle">Afternoon:</span> Begin your journey by
+          visiting the iconic Blue Mosque, also known as the Sultan Ahmed
+          Mosque. Marvel at its elegant domes, six minarets, and intricate blue
+          tiles that inspired its name. Then, head to Hagia Sophia, an
+          architectural masterpiece that has witnessed centuries of history and
+          transitions. Stand in awe as you take in its immense dome and the
+          exquisite mosaics that adorn its walls.<br /><br />
+          <span class="subtitle">Evening:</span> As the sun sets, Sultanahmet
+          Square comes alive with a magical glow, illuminating the Blue Mosque
+          and Hagia Sophia. Take a leisurely stroll around the square, savoring
+          the serene ambiance and the captivating beauty of these historic
+          monuments.
+        </div>
+        <div
+          class="day-pic"
+          style="background-image: url('/pictures/istanbul-2.jpg')"
+        ></div>
+      </div>
+
+      <button class="acc-button" onclick="OpenDay(3)">
+        Day 2: Exploring the Old City
+      </button>
+      <div class="day-plan mask">
+        <div>
+          <span class="subtitle">Morning:</span>
+          Dive into the historical depths of Istanbul by exploring the Basilica
+          Cistern. Descend into this subterranean marvel, where the dim lighting
+          casts an enchanting aura over the ancient columns and reflective
+          waters. <br />
+          <br /><span class="subtitle">Afternoon:</span> Immerse yourself in
+          Ottoman opulence at Topkapi Palace. Explore its intricately adorned
+          chambers, discover the artifacts that once belonged to sultans, and
+          don't miss the enchanting Harem section, where the secrets of the
+          palace unfold.<br /><br />
+          <span class="subtitle">Evening:</span>
+          Embark on an adventure through the Grand Bazaar, a labyrinth of
+          vibrant stalls where shopkeepers beckon you to explore their
+          treasures. From the intoxicating aromas of spices to the shimmering
+          allure of carpets and jewelry, the bazaar is a sensory delight that
+          captures the essence of Istanbul's trading history.
+        </div>
+        <div
+          class="day-pic"
+          style="background-image: url('/pictures/day2.jpg')"
+        ></div>
+      </div>
+      <button class="acc-button" onclick="OpenDay(5)">
+        Day 3: Bosphorus Discovery
+      </button>
+      <div class="day-plan mask">
+        <div>
+          <span class="subtitle">Morning:</span>
+          Step aboard a Bosphorus cruise, embarking on a journey that reveals
+          Istanbul's skyline from a unique perspective. As you glide along the
+          water, you'll pass under the Bosphorus Bridge, witness the grandeur of
+          waterfront palaces, and be enchanted by the Maiden's Tower, a symbol
+          of love and legend. <br />
+          <br /><span class="subtitle">Afternoon:</span> Immerse yourself in the
+          splendor of Dolmabahce Palace. Marvel at its European-inspired
+          architecture, adorned with crystal chandeliers and intricate details.
+          As you wander through its halls, envision the opulent events that once
+          graced its premises.<br /><br />
+          <span class="subtitle">Evening:</span>
+          As the sun begins to set, make your way to the lively Istiklal Street.
+          This bustling promenade offers a blend of modern entertainment,
+          shopping, and dining. Explore its eclectic mix of stores, enjoy a
+          leisurely dinner at a local eatery, and be sure to catch live music or
+          theater performances that often unfold on this vibrant street.
+        </div>
+        <div
+          class="day-pic"
+          style="background-image: url('/pictures/day3.jpg')"
+        ></div>
+      </div>
+      <button class="acc-button" onclick="OpenDay(7)">
+        Day 4: Cultural Dives
+      </button>
+      <div class="day-plan mask">
+        <div>
+          <span class="subtitle">Morning:</span>
+          Begin your day with a visit to the Chora Church, also known as Kariye
+          Museum. Admire its breathtaking mosaics and frescoes that vividly
+          depict religious stories and characters. <br />
+          <br /><span class="subtitle">Afternoon:</span> Embark on a cultural
+          journey through the colorful Balat and Fener neighborhoods. Wander
+          through narrow streets flanked by picturesque houses, each adorned
+          with vibrant shades. These neighborhoods hold the historical
+          footprints of various cultures, making them a living testament to
+          Istanbul's multicultural heritage.<br /><br />
+          <span class="subtitle">Evening:</span>
+          Indulge in a traditional Turkish bath, known as a hamam. Choose a
+          historic hamam for an authentic experience that allows you to unwind,
+          cleanse, and soak in centuries-old rituals. As you leave feeling
+          refreshed, you'll carry a piece of Turkish culture with you.
+        </div>
+        <div
+          class="day-pic"
+          style="background-image: url('/pictures/day4.jpg')"
+        ></div>
+      </div>
+      <button class="acc-button" onclick="OpenDay(9)">
+        Day 5: Asia and Bosphorus Views
+      </button>
+      <div class="day-plan mask">
+        <div>
+          <span class="subtitle">Morning:</span>
+          Venture across the Bosphorus to Kadikoy, a bustling district on the
+          Asian side. Wander through its markets, where locals go about their
+          daily shopping, and sample the diverse flavors of Turkish cuisine.
+          <br />
+          <br /><span class="subtitle">Afternoon:</span> Ascend Camlica Hill,
+          where breathtaking panoramic views of Istanbul's skyline and the
+          Bosphorus await. Capture the city's beauty from a different angle and
+          appreciate the vastness that Istanbul encompasses.<br /><br />
+          <span class="subtitle">Evening:</span>
+          Embark on a memorable Bosphorus dinner cruise. Sail along the waters
+          under the illuminated bridges, enjoying a sumptuous Turkish feast
+          while surrounded by the city's shimmering lights. As you revel in the
+          enchanting atmosphere, you'll create lasting memories of Istanbul's
+          romantic charm.
+        </div>
+        <div
+          class="day-pic"
+          style="background-image: url('/pictures/day5.jpg')"
+        ></div>
+      </div>
+      <button class="acc-button" onclick="OpenDay(11)">
+        Day 6: Princes' Islands
+      </button>
+      <div class="day-plan mask">
+        <div>
+          <span class="subtitle">Morning:</span>
+          Begin your journey to the Princes' Islands, an archipelago offering a
+          peaceful retreat from the city's hustle and bustle. Catch a ferry to
+          Buyukada, the largest island, and feel the stress of city life melt
+          away.
+          <br />
+          <br /><span class="subtitle">Afternoon:</span> Explore Buyukada's
+          quaint streets on foot, rent a bicycle to navigate the island's
+          charming paths, or opt for a horse-drawn carriage ride. Delight in the
+          absence of cars as you discover the island's historical sites, relax
+          on the beach, and take in the refreshing sea breeze.<br /><br />
+          <span class="subtitle">Evening:</span>
+          Bid farewell to the island and return to Istanbul. As you stroll
+          through Taksim Square, the heart of modern Istanbul, you'll experience
+          the lively ambiance of its bars.
+        </div>
+        <div
+          class="day-pic"
+          style="background-image: url('/pictures/day6.jpg')"
+        ></div>
+      </div>
+      <button class="acc-button" onclick="OpenDay(13)">
+        Day 7: Farewell and Reflection
+      </button>
+      <div class="day-plan mask" style="font-size: 1.5rem">
+        <div>
+          <span class="subtitle">Morning:</span>
+          As the golden sun rises over the city, embark on your final day in
+          Istanbul with a mixture of nostalgia and anticipation. Start your
+          morning by immersing yourself in the bustling energy of the Spice
+          Bazaar. This historic marketplace is a sensory wonderland, with
+          colorful stalls offering a symphony of fragrances—spices, teas, dried
+          fruits, and more. Engage with local vendors, who are often eager to
+          share their knowledge and stories behind their products.
+          <br />
+          <br /><span class="subtitle">Afternoon:</span> After exploring the
+          Spice Bazaar, make your way to the iconic Galata Tower. As you ascend
+          its spiral staircase, you'll be rewarded with breathtaking panoramic
+          views of Istanbul. Capture these final moments in the city with a
+          heartfelt photo session, cherishing the memories you've created
+          throughout your journey.<br /><br />
+          <span class="subtitle">Evening:</span>
+          For your farewell dinner, choose a rooftop restaurant that offers a
+          perfect blend of delicious cuisine and enchanting views. As you dine,
+          let the past week's experiences unfold before you. Remember the
+          awe-inspiring monuments, the delightful tastes, and the genuine
+          connections you've made with the city.
+        </div>
+        <div
+          class="day-pic"
+          style="background-image: url('/pictures/day7.jpg')"
+        ></div>
+      </div>
+    </div>
+    <div class="day-trips landmarks mask">
+      <div class="landmark-card" style="background-color: rgb(255, 195, 122)">
+        <div
+          class="landmark-card-pic"
+          style="background-image: url('/pictures/sapanca.jpg')"
+        ></div>
+        <div class="landmark-name">Day trip to Sapanca and Mashukiye</div>
+        <div class="landmark-description">
+          Experience the natural beauty of Sapanca Lake, surrounded by lush
+          forests and serene landscapes. Continue to Masukiye Waterfall, where
+          you can unwind in the tranquil atmosphere. This day trip offers a
+          serene escape, allowing you to connect with nature and recharge your
+          spirit.
+        </div>
+        <div
+          style="
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-bottom: 30px;
+          "
+        >
+          <div>
+            <div
+              class="landmark-description subtitle"
+              style="font-weight: bold; font-size: 1.7rem"
+            >
+              Price:€26.31
+              <span style="font-size: 0.6rem; color: black">/per person</span>
+            </div>
+          </div>
+          <a
+            href="https://www.getyourguide.com/istanbul-l56/sapanca-masukiye-tour-with-lunch-from-istanbul-t495580/"
+            target="_blank"
+            class="landmark-description subtitle book"
+            style="font-weight: bold; color: crimson"
+            >BOOK NOW</a
+          >
+        </div>
+      </div>
+      <div class="landmark-card" style="background-color: rgb(255, 195, 122)">
+        <div
+          class="landmark-card-pic"
+          style="background-image: url('/pictures/bursa.jpg')"
+        ></div>
+        <div class="landmark-name">Bursa</div>
+        <div class="landmark-description">
+          Immerse yourself in the enchanting "Green Bursa," renowned for its
+          picturesque landscapes and Ottoman legacy. Explore the historic Grand
+          Mosque, a symbol of the city, and take a cable car ride to Uludag
+          Mountain for breathtaking views. As you stroll through its streets,
+          Bursa's rich history and vibrant bazaars unfold, making it a
+          delightful day trip destination.
+        </div>
+        <div
+          style="
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-bottom: 30px;
+          "
+        >
+          <div>
+            <div
+              class="landmark-description subtitle"
+              style="font-weight: bold; font-size: 1.65rem"
+            >
+              Price:€41.05
+              <span style="font-size: 0.6rem; color: black">/per person</span>
+            </div>
+          </div>
+          <a
+            href="https://www.getyourguide.com/istanbul-l56/bursa-tour-from-istanbul-included-lunch-cable-car-t496774/"
+            target="_blank"
+            class="landmark-description subtitle book"
+            style="font-weight: bold; color: crimson"
+            >BOOK NOW</a
+          >
+        </div>
+      </div>
+      <div class="landmark-card" style="background-color: rgb(255, 195, 122)">
+        <div
+          class="landmark-card-pic"
+          style="background-image: url('/pictures/pamukkale.jpg')"
+        ></div>
+        <div class="landmark-name">Pamukkale</div>
+        <div class="landmark-description">
+          Witness the surreal beauty of Pamukkale, where white travertine
+          terraces cascade down the hillside, formed by mineral-rich thermal
+          waters. Visit Hierapolis, an ancient city with its well-preserved
+          necropolis, theaters, and thermal baths. Pamukkale's unique natural
+          wonders and historical significance create a captivating day trip
+          experience.
+        </div>
+        <div
+          style="
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-bottom: 30px;
+          "
+        >
+          <div>
+            <div
+              class="landmark-description subtitle"
+              style="font-weight: bold; font-size: 1.65rem"
+            >
+              Price:€420
+              <span style="font-size: 0.6rem; color: black">/per person</span>
+            </div>
+          </div>
+          <a
+            href="https://www.getyourguide.com/selcuk-l801/from-istanbul-ephesus-pamukkale-2-day-trip-with-flights-t396032/"
+            target="_blank"
+            class="landmark-description subtitle book"
+            style="font-weight: bold; color: crimson"
+            >BOOK NOW</a
+          >
+        </div>
+      </div>
+      <div class="landmark-card" style="background-color: rgb(255, 195, 122)">
+        <div
+          class="landmark-card-pic"
+          style="background-image: url('/pictures/cappadocia.jpg')"
+        ></div>
+        <div class="landmark-name">Cappadocia</div>
+        <div class="landmark-description">
+          Embark on a magical journey to Cappadocia, a region characterized by
+          its surreal landscapes and unique rock formations. Explore underground
+          cities, fairy chimneys, and cave churches, each with its own tale to
+          tell. A hot air balloon ride over the ethereal landscape offers a
+          once-in-a-lifetime perspective, making Cappadocia an unforgettable day
+          trip destination.
+        </div>
+        <div
+          style="
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-bottom: 30px;
+          "
+        >
+          <div>
+            <div
+              class="landmark-description subtitle"
+              style="font-weight: bold; font-size: 1.7rem"
+            >
+              Price:€530
+              <span style="font-size: 0.6rem; color: black">/per person</span>
+            </div>
+          </div>
+          <a
+            href="https://www.getyourguide.com/istanbul-l56/sapanca-masukiye-tour-with-lunch-from-istanbul-t495580/"
+            target="_blank"
+            class="landmark-description subtitle book"
+            style="font-weight: bold; color: crimson"
+            >BOOK NOW</a
+          >
+        </div>
+      </div>
+      <div class="landmark-card" style="background-color: rgb(255, 195, 122)">
+        <div
+          class="landmark-card-pic"
+          style="background-image: url('/pictures/prince.jpg')"
+        ></div>
+        <div class="landmark-name">Princes' Islands</div>
+        <div class="landmark-description">
+          Escape the city's hustle to the tranquil Princes' Islands, a car-free
+          retreat in the Sea of Marmara. Meander through charming streets
+          adorned with historic mansions, relax by the sea, and savor local
+          delicacies. The islands' serene ambiance and breathtaking views
+          provide a refreshing contrast to Istanbul's lively energy.
+        </div>
+        <div
+          style="
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-bottom: 30px;
+          "
+        >
+          <div>
+            <div
+              class="landmark-description subtitle"
+              style="font-weight: bold; font-size: 1.7rem"
+            >
+              Price:€20
+              <span style="font-size: 0.6rem; color: black">/per person</span>
+            </div>
+          </div>
+          <a
+            href="https://www.getyourguide.com/istanbul-l56/istanbul-princes-island-small-group-tour-t467551/"
+            target="_blank"
+            class="landmark-description subtitle book"
+            style="font-weight: bold; color: crimson"
+            >BOOK NOW</a
+          >
+        </div>
+      </div>
+    </div>
+    <div class="food landmarks mask" >
+      <div class="food landmarks"id="food">
+      <div class="food-card">
+        <div
+          style="
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            gap: 15px;
+          "
+        >
+          <div
+            class="food-pic"
+            style="background-image: url('/pictures/breakfast.jpg')"
+          ></div>
+          <i
+            class="fa-solid fa-arrow-right icon"
+            style="color: #ffffff; font-size: 1.8rem"
+            onclick="expand(0)"
+          ></i>
+        </div>
+        <div class="landmark-name" style="color: white; font-size: 1.9rem; height: min-content;">
+          Turkish Breakfast <br />
+          <br />
+          <span class="landmark-description mask">
+            The best way to start your first day in Istanbul is with a
+            traditional Turkish breakfast. This lavish meal is more like a
+            buffet for one than a single dish and is very likely to be the
+            biggest, most complex, and most varied breakfast you’ll ever have in
+            your life. If you’re searching for must-try foods in Istanbul,
+            you’ll love indulging in a Turkish breakfast!
+          </span>
+        </div>
+        <i
+          class="fa-solid fa-arrow-left"
+          style="color: #ffffff; display: none"
+          onclick="compress(0)"
+        ></i>
+      </div>
+      <div class="food-card">
+        <div
+          style="
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            gap: 15px;
+          "
+        >
+          <div
+            class="food-pic"
+            style="background-image: url('/pictures/burger.jpg')"
+          ></div>
+          <i
+            class="fa-solid fa-arrow-right"
+            style="color: #ffffff; font-size: 1.8rem"
+            onclick="expand(1)"
+          ></i>
+        </div>
+        <div class="landmark-name" style="color: white; font-size: 1.9rem">
+          Islak Burger <br />
+          <br />
+          <span class="landmark-description mask">
+            islak burger is made of a delicious beef patty tucked inside a soft
+            white hamburger bun. The inside and outside of the bun are soaked in
+            a flavor-packed garlic and tomato sauce before the whole thing is
+            nestled inside a steam box. This keeps every burger soft and warm
+            until it’s ready to eat.
+          </span>
+        </div>
+        <i
+          class="fa-solid fa-arrow-left"
+          style="color: #ffffff; display: none"
+          onclick="compress(1)"
+        ></i>
+      </div>
+      <div class="food-card">
+        <div
+          style="
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            gap: 15px;
+          "
+        >
+          <div
+            class="food-pic"
+            style="background-image: url('/pictures/mnemen.jpg')"
+          ></div>
+          <i
+            class="fa-solid fa-arrow-right"
+            style="color: #ffffff; font-size: 1.8rem"
+            onclick="expand(2)"
+          ></i>
+        </div>
+        <div class="landmark-name" style="color: white; font-size: 1.9rem">
+          Menemen <br />
+          <br />
+          <span class="landmark-description mask">
+            If a traditional Turkish breakfast is way too much for you, dig into
+            a plate of menemen for your first meal of the day instead. A
+            creative and delectable type of scrambled eggs, menemen is made up
+            of lightly beaten eggs that are cooked in a skillet with onions,
+            peppers, tomatoes, and mixed herbs. To give it an extra kick, fresh
+            or dried chilies are sometimes added, too.
+          </span>
+        </div>
+        <i
+          class="fa-solid fa-arrow-left"
+          style="color: #ffffff; display: none"
+          onclick="compress(2)"
+        ></i>
+      </div>
+      <div class="food-card">
+        <div
+          style="
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            gap: 15px;
+          "
+        >
+          <div
+            class="food-pic"
+            style="background-image: url('/pictures/bread.jpg')"
+          ></div>
+          <i
+            class="fa-solid fa-arrow-right"
+            style="color: #ffffff; font-size: 1.8rem"
+            onclick="expand(3)"
+          ></i>
+        </div>
+        <div class="landmark-name" style="color: white; font-size: 1.85rem">
+          Simit, Açma, and Çatal <br />
+          <br />
+          <span class="landmark-description mask">
+            These three wonderful types of bread are usually eaten by locals on
+            the go in the mornings. You’ll find countless Istanbul street food
+            sellers offering them, but you can also order some freshly-baked
+            ones from any bakery in the city.As they’re such a popular to-go
+            food, most people eat these Turkish breads plain. They make a great
+            snack when you’re hungry and don’t have time for a proper sit-down
+            meal.
+          </span>
+        </div>
+        <i
+          class="fa-solid fa-arrow-left"
+          style="color: #ffffff; display: none"
+          onclick="compress(3)"
+        ></i>
+      </div>
+      <div class="food-card">
+        <div
+          style="
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            gap: 15px;
+          "
+        >
+          <div
+            class="food-pic"
+            style="background-image: url('/pictures/kabeb.jpg')"
+          ></div>
+          <i
+            class="fa-solid fa-arrow-right"
+            style="color: #ffffff; font-size: 1.8rem"
+            onclick="expand(4)"
+          ></i>
+        </div>
+        <div class="landmark-name" style="color: white; font-size: 1.85rem">
+          Adana Kebap <br />
+          <br />
+          <span class="landmark-description mask">
+            Istanbul dishes up a huge range of kebabs, but Adana kebap has to be
+            one of the absolute best foods in Istanbul. This typical dish is
+            made up of simple ingredients, but it’s the complex cooking process
+            that makes it so special.
+          </span>
+        </div>
+        <i
+          class="fa-solid fa-arrow-left"
+          style="color: #ffffff; display: none"
+          onclick="compress(4)"
+        ></i>
+      </div>
+      <div class="food-card">
+        <div
+          style="
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            gap: 15px;
+          "
+        >
+          <div
+            class="food-pic"
+            style="background-image: url('/pictures/manti.jpg')"
+          ></div>
+          <i
+            class="fa-solid fa-arrow-right"
+            style="color: #ffffff; font-size: 1.8rem"
+            onclick="expand(5)"
+          ></i>
+        </div>
+        <div class="landmark-name" style="color: white; font-size: 1.85rem">
+          Mantı <br />
+          <br />
+          <span class="landmark-description mask">
+            Turkey’s answer to Italy’s ravioli, mantı is an unusual appetizer
+            that will have you hooked after the first bite. The pasta-like
+            dumplings are served hot, but they’re covered with cold yogurt and
+            garlic. This results in an unusual dish that’s miles away from the
+            regular ravioli you’re probably used to.
+          </span>
+        </div>
+        <i
+          class="fa-solid fa-arrow-left"
+          style="color: #ffffff; display: none"
+          onclick="compress(5)"
+        ></i>
+      </div>
+      <div class="food-card">
+        <div
+          style="
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            gap: 15px;
+          "
+        >
+          <div
+            class="food-pic"
+            style="background-image: url('/pictures/pide.jpg')"
+          ></div>
+          <i
+            class="fa-solid fa-arrow-right"
+            style="color: #ffffff; font-size: 1.8rem"
+            onclick="expand(6)"
+          ></i>
+        </div>
+        <div class="landmark-name" style="color: white; font-size: 1.85rem">
+          Pide <br />
+          <br />
+          <span class="landmark-description mask">
+            If you’re in the mood for pizza, you’ve got to try pide. This
+            incredibly moreish dish is one of the must-try dishes in Istanbul
+            and is comprised of a typical Turkish flatbread with folded edges
+            that create a delicate puffy crust when baked. The center of the
+            bread is loaded up with ooey-gooey melted cheese before it’s laden
+            with the delicious extras of your choice.
+          </span>
+        </div>
+        <i
+          class="fa-solid fa-arrow-left"
+          style="color: #ffffff; display: none"
+          onclick="compress(6)"
+        ></i>
+      </div>
+      <div class="food-card">
+        <div
+          style="
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            gap: 15px;
+          "
+        >
+          <div
+            class="food-pic"
+            style="background-image: url('/pictures/baklava.jpg')"
+          ></div>
+          <i
+            class="fa-solid fa-arrow-right"
+            style="color: #ffffff; font-size: 1.8rem"
+            onclick="expand(7)"
+          ></i>
+        </div>
+        <div class="landmark-name" style="color: white; font-size: 1.85rem">
+          Baklava <br />
+          <br />
+          <span class="landmark-description mask">
+            It’s almost impossible to visit Istanbul without trying baklava.
+            This iconic Turkish dessert is served for pretty much any occasion –
+            as a sweet end to breakfast, to accompany a cup of tea in the
+            afternoon, and as a way for a restaurant to say thank you after an
+            evening meal.
+          </span>
+        </div>
+        <i
+          class="fa-solid fa-arrow-left"
+          style="color: #ffffff; display: none"
+          onclick="compress(7)"
+        ></i>
+      </div>
+      <div class="food-card">
+        <div
+          style="
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            gap: 15px;
+          "
+        >
+          <div
+            class="food-pic"
+            style="background-image: url('/pictures/ice.jpg')"
+          ></div>
+          <i
+            class="fa-solid fa-arrow-right"
+            style="color: #ffffff; font-size: 1.8rem"
+            onclick="expand(8)"
+          ></i>
+        </div>
+        <div class="landmark-name" style="color: white; font-size: 1.85rem">
+          Turkish Ice Cream <br />
+          <br />
+          <span class="landmark-description mask">
+            Known locally as maraş dövme dondurması, Turkish ice cream is so
+            much more than a sweet treat to cool down with in the afternoon.
+            When you order this snack from an Istanbul street food seller, it
+            will be accompanied by a full comedy show! 
+        </div>
+        <i
+          class="fa-solid fa-arrow-left"
+          style="color: #ffffff; display: none"
+          onclick="compress(8)"
+        ></i>
+      </div>
+      <div class="food-card">
+        <div
+          style="
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            gap: 15px;
+          "
+        >
+          <div
+            class="food-pic"
+            style="background-image: url('/pictures/sandwich.jpg')"
+          ></div>
+          <i
+            class="fa-solid fa-arrow-right"
+            style="color: #ffffff; font-size: 1.8rem"
+            onclick="expand(9)"
+          ></i>
+        </div>
+        <div class="landmark-name" style="color: white; font-size: 1.85rem">
+          Balık Ekmek
+          <br />
+          <br />
+          <span class="landmark-description mask">
+            If you’re a fan of seafood, make sure to add balık ekmek to your
+            things to eat in Istanbul list. This classic dish literally
+            translates into English as “fish bread,” but it’s so much better
+            than it sounds! Balık ekmek is made from a delicate and flavorful
+            piece of mackerel that’s been perfectly grilled and placed between
+            two six-inch pieces of sandwich bread along with whichever crunchy
+            veggies you choose. 
+          </span>
+        </div>
+        <i
+          class="fa-solid fa-arrow-left"
+          style="color: #ffffff; display: none"
+          onclick="compress(9)"
+        ></i>
+      </div>
+      <div class="food-card">
+        <div
+          style="
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            gap: 15px;
+          "
+        >
+          <div
+            class="food-pic"
+            style="background-image: url('/pictures/durum.jpg')"
+          ></div>
+          <i
+            class="fa-solid fa-arrow-right"
+            style="color: #ffffff; font-size: 1.8rem"
+            onclick="expand(10)"
+          ></i>
+        </div>
+        <div class="landmark-name" style="color: white; font-size: 1.85rem">
+          Durum
+          <br />
+          <br />
+          <span class="landmark-description mask">
+            One of Anthony Bourdain’s favorites from his No Reservations series,
+            durum is quite possibly the best street food there is in Istanbul.
+            Another type of kebab, durum is made of a thin yet sturdy flatbread
+            known as lavash, which is topped with grilled lamb, grilled
+            vegetables, and sauce. The whole thing is wrapped up into a chunky
+            roll so you can enjoy it on the go.
+          </span>
+        </div>
+        <i
+          class="fa-solid fa-arrow-left"
+          style="color: #ffffff; display: none"
+          onclick="compress(10)"
+        ></i>
+      </div>
+    </div>
+    <div class="food landmarks mask-food " id="food2">
+      <div class="food-card">
+        <div
+          style="
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+          
+          "
+        >
+          <div
+            class="food-pic"
+            style="background-image: url('/pictures/breakfast.jpg')"
+          ></div>
+          <div class="landmark-name" style="color: white; font-size: 1.9rem">
+              Turkish Breakfast <br />
+              <br />
+              <span class="landmark-description mask">
+                The best way to start your first day in Istanbul is with a
+                traditional Turkish breakfast. This lavish meal is more like a
+                buffet for one than a single dish and is very likely to be the
+                biggest, most complex, and most varied breakfast you’ll ever have in
+                your life. If you’re searching for must-try foods in Istanbul,
+                you’ll love indulging in a Turkish breakfast!
+              </span>
+          </div>
+          <i
+              class="fa-solid fa-arrow-left"
+              style="color: #ffffff; display: none"
+              onclick="compress2(0)"
+            ></i>
+          <i
+            class="fa-solid fa-arrow-right icon"
+            style="color: #ffffff; font-size: 1.8rem; transform: rotateZ(90deg);"
+            onclick="expand2(0)"
+          ></i>
+          </div>
+      </div>
+      <div class="food-card">
+        <div
+        style="
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+      
+      "
+        >
+          <div
+            class="food-pic"
+            style="background-image: url('/pictures/burger.jpg')"
+          ></div>
+          <div class="landmark-name" style="color: white; font-size: 1.9rem">
+              Islak Burger <br />
+              <br />
+              <span class="landmark-description mask">
+                islak burger is made of a delicious beef patty tucked inside a soft
+                white hamburger bun. The inside and outside of the bun are soaked in
+                a flavor-packed garlic and tomato sauce before the whole thing is
+                nestled inside a steam box. This keeps every burger soft and warm
+                until it’s ready to eat.
+              </span>
+            </div>
+            <i
+          class="fa-solid fa-arrow-left"
+          style="color: #ffffff; display: none"
+          onclick="compress2(1)"
+        ></i>
+          <i
+            class="fa-solid fa-arrow-right"
+            style="color: #ffffff; font-size: 1.8rem; transform: rotateZ(90deg);"
+            onclick="expand2(1)"
+          ></i>
+          
+        </div>
+      
+        
+      </div>
+      <div class="food-card">
+        <div
+        style="
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+      
+      "
+        >
+          <div
+            class="food-pic"
+            style="background-image: url('/pictures/mnemen.jpg')"
+          ></div>
+          <div class="landmark-name" style="color: white; font-size: 1.9rem">
+              Menemen <br />
+              <br />
+              <span class="landmark-description mask">
+                If a traditional Turkish breakfast is way too much for you, dig into
+                a plate of menemen for your first meal of the day instead. A
+                creative and delectable type of scrambled eggs, menemen is made up
+                of lightly beaten eggs that are cooked in a skillet with onions,
+                peppers, tomatoes, and mixed herbs. To give it an extra kick, fresh
+                or dried chilies are sometimes added, too.
+              </span>
+            </div>
+            <i
+            class="fa-solid fa-arrow-left"
+            style="color: #ffffff; display: none"
+            onclick="compress2(2)"
+          ></i>
+          <i
+            class="fa-solid fa-arrow-right"
+            style="color: #ffffff; font-size: 1.8rem; transform: rotateZ(90deg);"
+            onclick="expand2(2)"
+          ></i>
+        </div>
+        
+        
+      </div>
+      <div class="food-card">
+        <div
+        style="
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+      
+      "
+        >
+          <div
+            class="food-pic"
+            style="background-image: url('/pictures/bread.jpg')"
+          ></div>
+          <div class="landmark-name" style="color: white; font-size: 1.85rem">
+              Simit, Açma, Çatal <br />
+              <br />
+              <span class="landmark-description mask">
+                These three wonderful types of bread are usually eaten by locals on
+                the go in the mornings. You’ll find countless Istanbul street food
+                sellers offering them, but you can also order some freshly-baked
+                ones from any bakery in the city.As they’re such a popular to-go
+                food, most people eat these Turkish breads plain. They make a great
+                snack when you’re hungry and don’t have time for a proper sit-down
+                meal.
+              </span>
+            </div>
+            <i
+            class="fa-solid fa-arrow-left"
+            style="color: #ffffff; display: none"
+            onclick="compress2(3)"
+          ></i>
+          <i
+            class="fa-solid fa-arrow-right"
+            style="color: #ffffff; font-size: 1.8rem; transform: rotateZ(90deg);"
+            onclick="expand2(3)"
+          ></i>
+        </div>
+        
+        
+      </div>
+      <div class="food-card">
+        <div
+        style="
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+      
+      "
+        >
+          <div
+            class="food-pic"
+            style="background-image: url('/pictures/kabeb.jpg')"
+          ></div>
+          <div class="landmark-name" style="color: white; font-size: 1.85rem">
+              Adana Kebap <br />
+              <br />
+              <span class="landmark-description mask">
+                Istanbul dishes up a huge range of kebabs, but Adana kebap has to be
+                one of the absolute best foods in Istanbul. This typical dish is
+                made up of simple ingredients, but it’s the complex cooking process
+                that makes it so special.
+              </span>
+            </div>
+            <i
+          class="fa-solid fa-arrow-left"
+          style="color: #ffffff; display: none"
+          onclick="compress2(4)"
+        ></i>
+          <i
+            class="fa-solid fa-arrow-right"
+            style="color: #ffffff; font-size: 1.8rem; transform: rotateZ(90deg);"
+            onclick="expand2(4)"
+          ></i>
+        </div>
+        
+        
+      </div>
+      <div class="food-card">
+        <div
+        style="
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+      
+      "
+        >
+          <div
+            class="food-pic"
+            style="background-image: url('/pictures/manti.jpg')"
+          ></div>
+          <div class="landmark-name" style="color: white; font-size: 1.85rem">
+              Mantı <br />
+              <br />
+              <span class="landmark-description mask">
+                Turkey’s answer to Italy’s ravioli, mantı is an unusual appetizer
+                that will have you hooked after the first bite. The pasta-like
+                dumplings are served hot, but they’re covered with cold yogurt and
+                garlic. This results in an unusual dish that’s miles away from the
+                regular ravioli you’re probably used to.
+              </span>
+            </div>
+            
+        <i
+        class="fa-solid fa-arrow-left"
+        style="color: #ffffff; display: none"
+        onclick="compress2(5)"
+      ></i>
+          <i
+            class="fa-solid fa-arrow-right"
+            style="color: #ffffff; font-size: 1.8rem; transform: rotateZ(90deg);"
+            onclick="expand2(5)"
+          ></i>
+        </div>
+        
+      </div>
+      <div class="food-card">
+        <div
+        style="
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+      
+      "
+        >
+          <div
+            class="food-pic"
+            style="background-image: url('/pictures/pide.jpg')"
+          ></div>
+          <div class="landmark-name" style="color: white; font-size: 1.85rem">
+              Pide <br />
+              <br />
+              <span class="landmark-description mask">
+                If you’re in the mood for pizza, you’ve got to try pide. This
+                incredibly moreish dish is one of the must-try dishes in Istanbul
+                and is comprised of a typical Turkish flatbread with folded edges
+                that create a delicate puffy crust when baked. The center of the
+                bread is loaded up with ooey-gooey melted cheese before it’s laden
+                with the delicious extras of your choice.
+              </span>
+            </div>
+            <i
+          class="fa-solid fa-arrow-left"
+          style="color: #ffffff; display: none"
+          onclick="compress2(6)"
+        ></i>
+          <i
+            class="fa-solid fa-arrow-right"
+            style="color: #ffffff; font-size: 1.8rem; transform: rotateZ(90deg);"
+            onclick="expand2(6)"
+          ></i>
+        </div>
+        
+        
+      </div>
+      <div class="food-card">
+        <div
+        style="
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+      
+      "
+        >
+          <div
+            class="food-pic"
+            style="background-image: url('/pictures/baklava.jpg')"
+          ></div>
+          <div class="landmark-name" style="color: white; font-size: 1.85rem">
+              Baklava <br />
+              <br />
+              <span class="landmark-description mask">
+                It’s almost impossible to visit Istanbul without trying baklava.
+                This iconic Turkish dessert is served for pretty much any occasion –
+                as a sweet end to breakfast, to accompany a cup of tea in the
+                afternoon, and as a way for a restaurant to say thank you after an
+                evening meal.
+              </span>
+            </div>
+            <i
+          class="fa-solid fa-arrow-left"
+          style="color: #ffffff; display: none"
+          onclick="compress2(7)"
+        ></i>
+          <i
+            class="fa-solid fa-arrow-right"
+            style="color: #ffffff; font-size: 1.8rem; transform: rotateZ(90deg);"
+            onclick="expand2(7)"
+          ></i>
+        </div>
+      
+        
+      </div>
+      <div class="food-card">
+        <div
+        style="
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+      
+      "
+        >
+          <div
+            class="food-pic"
+            style="background-image: url('/pictures/ice.jpg')"
+          ></div>
+          <div class="landmark-name" style="color: white; font-size: 1.85rem">
+              Turkish Ice Cream <br />
+              <br />
+              <span class="landmark-description mask">
+                Known locally as maraş dövme dondurması, Turkish ice cream is so
+                much more than a sweet treat to cool down with in the afternoon.
+                When you order this snack from an Istanbul street food seller, it
+                will be accompanied by a full comedy show! 
+            </div>
+            <i
+          class="fa-solid fa-arrow-left"
+          style="color: #ffffff; display: none"
+          onclick="compress2(8)"
+        ></i>
+          <i
+            class="fa-solid fa-arrow-right"
+            style="color: #ffffff; font-size: 1.8rem; transform: rotateZ(90deg);"
+            onclick="expand2(8)"
+          ></i>
+        </div>
+        
+        
+      </div>
+      <div class="food-card">
+        <div
+        style="
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+      
+      "
+        >
+          <div
+            class="food-pic"
+            style="background-image: url('/pictures/sandwich.jpg')"
+          ></div>
+          <div class="landmark-name" style="color: white; font-size: 1.85rem">
+              Balık Ekmek
+              <br />
+              <br />
+              <span class="landmark-description mask">
+                If you’re a fan of seafood, make sure to add balık ekmek to your
+                things to eat in Istanbul list. This classic dish literally
+                translates into English as “fish bread,” but it’s so much better
+                than it sounds! Balık ekmek is made from a delicate and flavorful
+                piece of mackerel that’s been perfectly grilled and placed between
+                two six-inch pieces of sandwich bread along with whichever crunchy
+                veggies you choose. It’s often served with a wedge of lemon – the
+                citrus juice really adds a zing and lightens up the whole thing.
+              </span>
+            </div>
+            <i
+            class="fa-solid fa-arrow-left"
+            style="color: #ffffff; display: none"
+            onclick="compress2(9)"
+          ></i>
+          <i
+            class="fa-solid fa-arrow-right"
+            style="color: #ffffff; font-size: 1.8rem; transform: rotateZ(90deg);"
+            onclick="expand2(9)"
+          ></i>
+        </div>
+        
+      
+      </div>
+      <div class="food-card">
+        <div
+        style="
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+      
+      "
+        >
+          <div
+            class="food-pic"
+            style="background-image: url('/pictures/durum.jpg')"
+          ></div>
+          <div class="landmark-name" style="color: white; font-size: 1.85rem">
+              Durum
+              <br />
+              <br />
+              <span class="landmark-description mask">
+                One of Anthony Bourdain’s favorites from his No Reservations series,
+                durum is quite possibly the best street food there is in Istanbul.
+                Another type of kebab, durum is made of a thin yet sturdy flatbread
+                known as lavash, which is topped with grilled lamb, grilled
+                vegetables, and sauce. The whole thing is wrapped up into a chunky
+                roll so you can enjoy it on the go.
+              </span>
+            </div>
+            <i
+          class="fa-solid fa-arrow-left"
+          style="color: #ffffff; display: none"
+          onclick="compress2(10)"
+        ></i>
+          <i
+            class="fa-solid fa-arrow-right"
+            style="color: #ffffff; font-size: 1.8rem; transform: rotateZ(90deg);"
+            onclick="expand2(10)"
+          ></i>
+        </div>
+       
+        
+      </div>
+    </div>
+  </div>
+    
+  </body>
+  <script>
+    function openList() {
+      let lista = document.getElementById("acc1");
+      if (
+        lista.className === "accordion list-opened" ||
+        lista.className === "accordion list-opened2"
+      ) {
+        lista.classList.remove("list-opened");
+        lista.classList.remove("list-opened2");
+      } else {
+        if (
+          document.body.scrollTop > 0 ||
+          document.documentElement.scrollTop > 0
+        ) {
+          lista.classList.add("list-opened2");
+        } else {
+          lista.classList.add("list-opened");
+        }
+      }
+    }
+    window.onscroll = function () {
+      scrollFunction();
+      dropdownSelector();
+    };
+    function openList2() {
+      let lista = document.getElementById("acc2");
+      if (
+        lista.className === "accordion list-opened" ||
+        lista.className === "accordion list-opened2"
+      ) {
+        lista.classList.remove("list-opened");
+        lista.classList.remove("list-opened2");
+      } else {
+        if (
+          document.body.scrollTop > 0 ||
+          document.documentElement.scrollTop > 0
+        ) {
+          lista.classList.add("list-opened2");
+        } else {
+          lista.classList.add("list-opened");
+        }
+      }
+    }
+    function scrollFunction() {
+      if (
+        document.body.scrollTop > 0 ||
+        document.documentElement.scrollTop > 0
+      ) {
+        document.getElementById("navi").classList.add("scale-down");
+      } else {
+        document.getElementById("navi").classList.remove("scale-down");
+      }
+    }
+    function openSubs() {
+      let popup = document.getElementById("subs");
+      popup.classList.add("open-popup");
+    }
+    function openLog() {
+      let popup = document.getElementById("log");
+      popup.classList.add("open-popup");
+    }
+    function closeSubs() {
+      let popup = document.getElementById("subs");
+      popup.classList.remove("open-popup");
+    }
+    function closeLog() {
+      let popup = document.getElementById("log");
+      popup.classList.remove("open-popup");
+    }
+    function submitForm(event) {
+      event.preventDefault();
+    }
+    function passwordCheck() {
+      let pass = document.getElementById("pass");
+      let passCheck = document.getElementById("passCheck");
+
+      if (passCheck.value === pass.value) {
+        let form = getElementsByClassName("formulaire");
+        form.submit;
+      } else {
+        let alertt = document.getElementById("passAlert");
+        alertt.classList.remove("mask");
+      }
+    }
+    function ReadMore(a) {
+      document.getElementById("land").children[a].classList.add("read-more");
+      document
+        .getElementById("land")
+        .children[a].children[3].children[0].classList.add("read-more-button");
+      document
+        .getElementById("land")
+        .children[a].children[3].children[1].classList.remove(
+          "read-more-button"
+        );
+      document
+        .getElementById("land")
+        .children[a].children[2].children[1].classList.remove(
+          "read-more-button"
+        );
+      document
+        .getElementById("land")
+        .children[a].children[2].children[8].classList.remove(
+          "read-more-button"
+        );
+    }
+    function ShowLess(a) {
+      document.getElementById("land").children[a].classList.remove("read-more");
+      document
+        .getElementById("land")
+        .children[a].children[3].children[0].classList.remove(
+          "read-more-button"
+        );
+      document
+        .getElementById("land")
+        .children[a].children[3].children[1].classList.add("read-more-button");
+      document
+        .getElementById("land")
+        .children[a].children[2].children[1].classList.add("read-more-button");
+      document
+        .getElementById("land")
+        .children[a].children[2].children[8].classList.add("read-more-button");
+    }
+    function dropdownSelector() {
+      if (
+        document.body.scrollTop > 100 ||
+        document.documentElement.scrollTop > 100
+      ) {
+        document.getElementById("selec").classList.add("dropdown");
+        document.getElementById("selec2").classList.add("dropdown");
+      } else {
+        document.getElementById("selec").classList.remove("dropdown");
+        document.getElementById("selec2").classList.remove("dropdown");
+      }
+    }
+    function OpenDay(a) {
+      if (document.getElementById("iti").children[a].classList.length >= 2) {
+        document.getElementById("iti").children[a].classList.remove("mask");
+      } else {
+        document.getElementById("iti").children[a].classList.add("mask");
+      }
+      for (let i = 1; i < 13; i++) {
+        if (i % 2 == 1 && i != a) {
+          if (
+            document.getElementById("iti").children[i].classList.length == 1
+          ) {
+            document.getElementById("iti").children[i].classList.add("mask");
+          }
+        }
+      }
+    }
+    function basculer(a, b) {
+      document.getElementById("bod").children[a].classList.remove("mask");
+      document.getElementById("selec").children[b].classList.add("selected");
+      document
+        .getElementById("selec")
+        .children[b].children[1].classList.add("selected-line");
+      for (let i = 5; i < 9; i++) {
+        if (i != a) {
+          document.getElementById("bod").children[i].classList.add("mask");
+        }
+        for (let j = 0; j < 4; j++) {
+          if (j != b) {
+            document
+              .getElementById("selec")
+              .children[j].classList.remove("selected");
+            document
+              .getElementById("selec")
+              .children[j].children[1].classList.remove("selected-line");
+          }
+        }
+      }
+    }
+    function expand(a) {
+      document
+        .getElementById("food")
+        .children[a].classList.add("expand-food-card");
+      document
+        .getElementById("food")
+        .children[a].children[1].children[2].classList.remove("mask");
+
+      document.getElementById("food").children[
+        a
+      ].children[0].children[1].attributes[1].nodeValue =
+        "color: #ffffff; font-size: 1.8rem; display:none";
+      document.getElementById("food").children[
+        a
+      ].children[2].attributes[1].nodeValue =
+        "color: #ffffff; font-size: 1.8rem;";
+    }
+    function compress(a) {
+      document
+        .getElementById("food")
+        .children[a].classList.remove("expand-food-card");
+      document
+        .getElementById("food")
+        .children[a].children[1].children[2].classList.add("mask");
+
+      document.getElementById("food").children[
+        a
+      ].children[0].children[1].attributes[1].nodeValue =
+        "color: #ffffff; font-size: 1.8rem;";
+      document.getElementById("food").children[
+        a
+      ].children[2].attributes[1].nodeValue =
+        "color: #ffffff; font-size: 1.8rem;  display:none";
+    }
+    function expand2(a) {
+      document
+        .getElementById("food2")
+        .children[a].classList.add("expand-food-card2");
+      document
+        .getElementById("food2")
+        .children[a].children[0].children[1].children[2].classList.remove("mask");
+
+      document.getElementById("food2").children[
+        a
+      ].children[0].children[3].attributes[1].nodeValue =
+        "color: #ffffff; font-size: 1.8rem; display:none";
+      document.getElementById("food2").children[
+        a
+      ].children[0].children[2].attributes[1].nodeValue =
+        "color: #ffffff; font-size: 1.8rem; transform: rotateZ(90deg)";
+    }
+    function compress2(a)
+    {
+        document
+        .getElementById("food2")
+        .children[a].classList.remove("expand-food-card2");
+      document
+        .getElementById("food2")
+        .children[a].children[0].children[1].children[2].classList.add("mask");
+
+      document.getElementById("food2").children[
+        a
+      ].children[0].children[3].attributes[1].nodeValue =
+        "color: #ffffff; font-size: 1.8rem; transform: rotateZ(90deg)";
+      document.getElementById("food2").children[
+        a
+      ].children[0].children[2].attributes[1].nodeValue =
+        "color: #ffffff; font-size: 1.8rem; display:none";
+    }
+    function basculer2(a, b) {
+      document.getElementById("bod").children[a].classList.remove("mask");
+      document.getElementById("selec").children[b].classList.add("selected");
+      document.getElementById("selec2").children[b].children[0].children[0].classList.remove("mask");
+      document.getElementById("selec2").children[b].children[0].children[1].classList.add("mask");
+      document.getElementById("selec2")
+        .children[b].children[1].classList.remove("mask");
+      for (let i = 5; i < 9; i++) {
+        if (i != a) {
+          document.getElementById("bod").children[i].classList.add("mask");
+        }
+        for (let j = 0; j < 4; j++) {
+          if (j != b) {
+      document.getElementById("selec2").children[j].children[0].children[0].classList.add("mask");
+      document.getElementById("selec2").children[j].children[0].children[1].classList.remove("mask");
+      document.getElementById("selec2")
+        .children[j].children[1].classList.add("mask");
+          }
+        }
+      }
+    }
+  </script>
+</html>

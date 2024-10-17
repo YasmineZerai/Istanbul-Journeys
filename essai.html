@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="WebSite.css" rel="stylesheet" />
+  </head>
+  <script
+    src="https://kit.fontawesome.com/471de5d1b2.js"
+    crossorigin="anonymous"
+  ></script>
+  <body>
+    <div class="food landmarks mask-food " id="food2">
+        <div class="food-card">
+          <div
+            style="
+              display: flex;
+              flex-direction: column;
+              justify-content: space-around;
+              align-items: center;
+            
+            "
+          >
+            <div
+              class="food-pic"
+              style="background-image: url('/pictures/breakfast.jpg')"
+            ></div>
+            <div class="landmark-name" style="color: white; font-size: 1.9rem">
+                Turkish Breakfast <br />
+                <br />
+                <span class="landmark-description mask">
+                  The best way to start your first day in Istanbul is with a
+                  traditional Turkish breakfast. This lavish meal is more like a
+                  buffet for one than a single dish and is very likely to be the
+                  biggest, most complex, and most varied breakfast you’ll ever have in
+                  your life. If you’re searching for must-try foods in Istanbul,
+                  you’ll love indulging in a Turkish breakfast!
+                </span>
+            </div>
+            <i
+                class="fa-solid fa-arrow-left"
+                style="color: #ffffff; display: none"
+                onclick="compress2(0)"
+              ></i>
+            <i
+              class="fa-solid fa-arrow-right icon"
+              style="color: #ffffff; font-size: 1.8rem; transform: rotateZ(90deg);"
+              onclick="expand2(0)"
+            ></i>
+            </div>
+        </div>
+        <div class="food-card">
+          <div
+          style="
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: center;
+        
+        "
+          >
+            <div
+              class="food-pic"
+              style="background-image: url('/pictures/burger.jpg')"
+            ></div>
+            <div class="landmark-name" style="color: white; font-size: 1.9rem">
+                Islak Burger <br />
+                <br />
+                <span class="landmark-description mask">
+                  islak burger is made of a delicious beef patty tucked inside a soft
+                  white hamburger bun. The inside and outside of the bun are soaked in
+                  a flavor-packed garlic and tomato sauce before the whole thing is
+                  nestled inside a steam box. This keeps every burger soft and warm
+                  until it’s ready to eat.
+                </span>
+              </div>
+              <i
+            class="fa-solid fa-arrow-left"
+            style="color: #ffffff; display: none"
+            onclick="compress2(1)"
+          ></i>
+            <i
+              class="fa-solid fa-arrow-right"
+              style="color: #ffffff; font-size: 1.8rem; transform: rotateZ(90deg);"
+              onclick="expand2(1)"
+            ></i>
+            
+          </div>
+        
+          
+        </div>
+        <div class="food-card">
+          <div
+          style="
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: center;
+        
+        "
+          >
+            <div
+              class="food-pic"
+              style="background-image: url('/pictures/mnemen.jpg')"
+            ></div>
+            <div class="landmark-name" style="color: white; font-size: 1.9rem">
+                Menemen <br />
+                <br />
+                <span class="landmark-description mask">
+                  If a traditional Turkish breakfast is way too much for you, dig into
+                  a plate of menemen for your first meal of the day instead. A
+                  creative and delectable type of scrambled eggs, menemen is made up
+                  of lightly beaten eggs that are cooked in a skillet with onions,
+                  peppers, tomatoes, and mixed herbs. To give it an extra kick, fresh
+                  or dried chilies are sometimes added, too.
+                </span>
+              </div>
+              <i
+              class="fa-solid fa-arrow-left"
+              style="color: #ffffff; display: none"
+              onclick="compress2(2)"
+            ></i>
+            <i
+              class="fa-solid fa-arrow-right"
+              style="color: #ffffff; font-size: 1.8rem; transform: rotateZ(90deg);"
+              onclick="expand2(2)"
+            ></i>
+          </div>
+          
+          
+        </div>
+        <div class="food-card">
+          <div
+          style="
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: center;
+        
+        "
+          >
+            <div
+              class="food-pic"
+              style="background-image: url('/pictures/bread.jpg')"
+            ></div>
+            <div class="landmark-name" style="color: white; font-size: 1.85rem">
+                Simit, Açma, and Çatal <br />
+                <br />
+                <span class="landmark-description mask">
+                  These three wonderful types of bread are usually eaten by locals on
+                  the go in the mornings. You’ll find countless Istanbul street food
+                  sellers offering them, but you can also order some freshly-baked
+                  ones from any bakery in the city.As they’re such a popular to-go
+                  food, most people eat these Turkish breads plain. They make a great
+                  snack when you’re hungry and don’t have time for a proper sit-down
+                  meal.
+                </span>
+              </div>
+              <i
+              class="fa-solid fa-arrow-left"
+              style="color: #ffffff; display: none"
+              onclick="compress2(3)"
+            ></i>
+            <i
+              class="fa-solid fa-arrow-right"
+              style="color: #ffffff; font-size: 1.8rem; transform: rotateZ(90deg);"
+              onclick="expand2(3)"
+            ></i>
+          </div>
+          
+          
+        </div>
+        <div class="food-card">
+          <div
+          style="
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: center;
+        
+        "
+          >
+            <div
+              class="food-pic"
+              style="background-image: url('/pictures/kabeb.jpg')"
+            ></div>
+            <div class="landmark-name" style="color: white; font-size: 1.85rem">
+                Adana Kebap <br />
+                <br />
+                <span class="landmark-description mask">
+                  Istanbul dishes up a huge range of kebabs, but Adana kebap has to be
+                  one of the absolute best foods in Istanbul. This typical dish is
+                  made up of simple ingredients, but it’s the complex cooking process
+                  that makes it so special.
+                </span>
+              </div>
+              <i
+            class="fa-solid fa-arrow-left"
+            style="color: #ffffff; display: none"
+            onclick="compress2(4)"
+          ></i>
+            <i
+              class="fa-solid fa-arrow-right"
+              style="color: #ffffff; font-size: 1.8rem; transform: rotateZ(90deg);"
+              onclick="expand2(4)"
+            ></i>
+          </div>
+          
+          
+        </div>
+        <div class="food-card">
+          <div
+          style="
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: center;
+        
+        "
+          >
+            <div
+              class="food-pic"
+              style="background-image: url('/pictures/manti.jpg')"
+            ></div>
+            <div class="landmark-name" style="color: white; font-size: 1.85rem">
+                Mantı <br />
+                <br />
+                <span class="landmark-description mask">
+                  Turkey’s answer to Italy’s ravioli, mantı is an unusual appetizer
+                  that will have you hooked after the first bite. The pasta-like
+                  dumplings are served hot, but they’re covered with cold yogurt and
+                  garlic. This results in an unusual dish that’s miles away from the
+                  regular ravioli you’re probably used to.
+                </span>
+              </div>
+              
+          <i
+          class="fa-solid fa-arrow-left"
+          style="color: #ffffff; display: none"
+          onclick="compress2(5)"
+        ></i>
+            <i
+              class="fa-solid fa-arrow-right"
+              style="color: #ffffff; font-size: 1.8rem; transform: rotateZ(90deg);"
+              onclick="expand2(5)"
+            ></i>
+          </div>
+          
+        </div>
+        <div class="food-card">
+          <div
+          style="
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: center;
+        
+        "
+          >
+            <div
+              class="food-pic"
+              style="background-image: url('/pictures/pide.jpg')"
+            ></div>
+            <div class="landmark-name" style="color: white; font-size: 1.85rem">
+                Pide <br />
+                <br />
+                <span class="landmark-description mask">
+                  If you’re in the mood for pizza, you’ve got to try pide. This
+                  incredibly moreish dish is one of the must-try dishes in Istanbul
+                  and is comprised of a typical Turkish flatbread with folded edges
+                  that create a delicate puffy crust when baked. The center of the
+                  bread is loaded up with ooey-gooey melted cheese before it’s laden
+                  with the delicious extras of your choice.
+                </span>
+              </div>
+              <i
+            class="fa-solid fa-arrow-left"
+            style="color: #ffffff; display: none"
+            onclick="compress2(6)"
+          ></i>
+            <i
+              class="fa-solid fa-arrow-right"
+              style="color: #ffffff; font-size: 1.8rem; transform: rotateZ(90deg);"
+              onclick="expand2(6)"
+            ></i>
+          </div>
+          
+          
+        </div>
+        <div class="food-card">
+          <div
+          style="
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: center;
+        
+        "
+          >
+            <div
+              class="food-pic"
+              style="background-image: url('/pictures/baklava.jpg')"
+            ></div>
+            <div class="landmark-name" style="color: white; font-size: 1.85rem">
+                Baklava <br />
+                <br />
+                <span class="landmark-description mask">
+                  It’s almost impossible to visit Istanbul without trying baklava.
+                  This iconic Turkish dessert is served for pretty much any occasion –
+                  as a sweet end to breakfast, to accompany a cup of tea in the
+                  afternoon, and as a way for a restaurant to say thank you after an
+                  evening meal.
+                </span>
+              </div>
+              <i
+            class="fa-solid fa-arrow-left"
+            style="color: #ffffff; display: none"
+            onclick="compress2(7)"
+          ></i>
+            <i
+              class="fa-solid fa-arrow-right"
+              style="color: #ffffff; font-size: 1.8rem; transform: rotateZ(90deg);"
+              onclick="expand2(7)"
+            ></i>
+          </div>
+        
+          
+        </div>
+        <div class="food-card">
+          <div
+          style="
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: center;
+        
+        "
+          >
+            <div
+              class="food-pic"
+              style="background-image: url('/pictures/ice.jpg')"
+            ></div>
+            <div class="landmark-name" style="color: white; font-size: 1.85rem">
+                Turkish Ice Cream <br />
+                <br />
+                <span class="landmark-description mask">
+                  Known locally as maraş dövme dondurması, Turkish ice cream is so
+                  much more than a sweet treat to cool down with in the afternoon.
+                  When you order this snack from an Istanbul street food seller, it
+                  will be accompanied by a full comedy show! 
+              </div>
+              <i
+            class="fa-solid fa-arrow-left"
+            style="color: #ffffff; display: none"
+            onclick="compress2(8)"
+          ></i>
+            <i
+              class="fa-solid fa-arrow-right"
+              style="color: #ffffff; font-size: 1.8rem; transform: rotateZ(90deg);"
+              onclick="expand2(8)"
+            ></i>
+          </div>
+          
+          
+        </div>
+        <div class="food-card">
+          <div
+          style="
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: center;
+        
+        "
+          >
+            <div
+              class="food-pic"
+              style="background-image: url('/pictures/sandwich.jpg')"
+            ></div>
+            <div class="landmark-name" style="color: white; font-size: 1.85rem">
+                Balık Ekmek
+                <br />
+                <br />
+                <span class="landmark-description mask">
+                  If you’re a fan of seafood, make sure to add balık ekmek to your
+                  things to eat in Istanbul list. This classic dish literally
+                  translates into English as “fish bread,” but it’s so much better
+                  than it sounds! Balık ekmek is made from a delicate and flavorful
+                  piece of mackerel that’s been perfectly grilled and placed between
+                  two six-inch pieces of sandwich bread along with whichever crunchy
+                  veggies you choose. It’s often served with a wedge of lemon – the
+                  citrus juice really adds a zing and lightens up the whole thing.
+                </span>
+              </div>
+              <i
+              class="fa-solid fa-arrow-left"
+              style="color: #ffffff; display: none"
+              onclick="compress2(9)"
+            ></i>
+            <i
+              class="fa-solid fa-arrow-right"
+              style="color: #ffffff; font-size: 1.8rem; transform: rotateZ(90deg);"
+              onclick="expand2(9)"
+            ></i>
+          </div>
+          
+        
+        </div>
+        <div class="food-card">
+          <div
+          style="
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: center;
+        
+        "
+          >
+            <div
+              class="food-pic"
+              style="background-image: url('/pictures/durum.jpg')"
+            ></div>
+            <div class="landmark-name" style="color: white; font-size: 1.85rem">
+                Durum
+                <br />
+                <br />
+                <span class="landmark-description mask">
+                  One of Anthony Bourdain’s favorites from his No Reservations series,
+                  durum is quite possibly the best street food there is in Istanbul.
+                  Another type of kebab, durum is made of a thin yet sturdy flatbread
+                  known as lavash, which is topped with grilled lamb, grilled
+                  vegetables, and sauce. The whole thing is wrapped up into a chunky
+                  roll so you can enjoy it on the go.
+                </span>
+              </div>
+              <i
+            class="fa-solid fa-arrow-left"
+            style="color: #ffffff; display: none"
+            onclick="compress2(10)"
+          ></i>
+            <i
+              class="fa-solid fa-arrow-right"
+              style="color: #ffffff; font-size: 1.8rem; transform: rotateZ(90deg);"
+              onclick="expand2(10)"
+            ></i>
+          </div>
+         
+          
+        </div>
+      </div>
+      <ul class="menu-selection" style="transform: translateY(100px);" id="selec2">
+        <li class="selector-item selected" onclick="basculer2(5,0)">
+          <a><span>Landmarks</span><span class="dot mask" style="background-color: #b74141;"></span></a>
+          <hr class="selector-item-line selected-line" />
+        </li>
+
+        <li class="selector-item selected"onclick="basculer2(6,1)">
+          <a><span class="mask"> Perfect Itinerary</span><span class="dot" style="background-color: #b74141;" ></span></a>
+          <hr class="selector-item-line selected-line mask" />
+        </li>
+        <li class="selector-item selected" onclick="basculer2(7,2)">
+          <a> <span class="mask">Day Trips</span><span class="dot" style="background-color: #b74141;"></span></a>
+          <hr class="selector-item-line selected-line mask" />
+        </li>
+        <li class="selector-item selected" onclick="basculer2(8,3)">
+          <a><span class="mask">Culinary Adventures</span><span class="dot" style="background-color: #b74141;"></span></a>
+          <hr class="selector-item-line selected-line mask" />
+        </li>
+      </ul>
+  </body>
+  <script>
+    function openList() {
+      let lista = document.getElementById("acc");
+      if (
+        lista.className === "accordion list-opened" ||
+        lista.className === "accordion list-opened2"
+      ) {
+        lista.classList.remove("list-opened");
+        lista.classList.remove("list-opened2");
+      } else {
+        if (
+          document.body.scrollTop > 0 ||
+          document.documentElement.scrollTop > 0
+        ) {
+          lista.classList.add("list-opened2");
+        } else {
+          lista.classList.add("list-opened");
+        }
+      }
+    }
+    window.onscroll = function () {
+      
+      dropdownSelector();
+    };
+    function openList2() {
+      let lista = document.getElementById("acc2");
+      if (
+        lista.className === "accordion list-opened" ||
+        lista.className === "accordion list-opened2"
+      ) {
+        lista.classList.remove("list-opened");
+        lista.classList.remove("list-opened2");
+      } else {
+        if (
+          document.body.scrollTop > 0 ||
+          document.documentElement.scrollTop > 0
+        ) {
+          lista.classList.add("list-opened2");
+        } else {
+          lista.classList.add("list-opened");
+        }
+      }
+    }
+    function scrollFunction() {
+      if (
+        document.body.scrollTop > 0 ||
+        document.documentElement.scrollTop > 0
+      ) {
+        document.getElementById("navi").classList.add("scale-down");
+      } else {
+        document.getElementById("navi").classList.remove("scale-down");
+      }
+    }
+    function openSubs() {
+      let popup = document.getElementById("subs");
+      popup.classList.add("open-popup");
+    }
+    function openLog() {
+      let popup = document.getElementById("log");
+      popup.classList.add("open-popup");
+    }
+    function closeSubs() {
+      let popup = document.getElementById("subs");
+      popup.classList.remove("open-popup");
+    }
+    function closeLog() {
+      let popup = document.getElementById("log");
+      popup.classList.remove("open-popup");
+    }
+    function submitForm(event) {
+      event.preventDefault();
+    }
+    function passwordCheck() {
+      let pass = document.getElementById("pass");
+      let passCheck = document.getElementById("passCheck");
+
+      if (passCheck.value === pass.value) {
+        let form = getElementsByClassName("formulaire");
+        form.submit;
+      } else {
+        let alertt = document.getElementById("passAlert");
+        alertt.classList.remove("mask");
+      }
+    }
+    function ReadMore(a) {
+      document.getElementById("land").children[a].classList.add("read-more");
+      document
+        .getElementById("land")
+        .children[a].children[3].children[0].classList.add("read-more-button");
+      document
+        .getElementById("land")
+        .children[a].children[3].children[1].classList.remove(
+          "read-more-button"
+        );
+      document
+        .getElementById("land")
+        .children[a].children[2].children[1].classList.remove(
+          "read-more-button"
+        );
+      document
+        .getElementById("land")
+        .children[a].children[2].children[8].classList.remove(
+          "read-more-button"
+        );
+    }
+    function ShowLess(a) {
+      document.getElementById("land").children[a].classList.remove("read-more");
+      document
+        .getElementById("land")
+        .children[a].children[3].children[0].classList.remove(
+          "read-more-button"
+        );
+      document
+        .getElementById("land")
+        .children[a].children[3].children[1].classList.add("read-more-button");
+      document
+        .getElementById("land")
+        .children[a].children[2].children[1].classList.add("read-more-button");
+      document
+        .getElementById("land")
+        .children[a].children[2].children[8].classList.add("read-more-button");
+    }
+    function dropdownSelector() {
+      if (
+        document.body.scrollTop > 100 ||
+        document.documentElement.scrollTop > 100
+      ) {
+        document.getElementById("selec").classList.add("dropdown");
+      } else {
+        document.getElementById("selec").classList.remove("dropdown");
+      }
+    }
+    function OpenDay(a) {
+      if (document.getElementById("iti").children[a].classList.length >= 2) {
+        document.getElementById("iti").children[a].classList.remove("mask");
+      } else {
+        document.getElementById("iti").children[a].classList.add("mask");
+      }
+      for (let i = 1; i < 13; i++) {
+        if (i % 2 == 1 && i != a) {
+          if (
+            document.getElementById("iti").children[i].classList.length == 1
+          ) {
+            document.getElementById("iti").children[i].classList.add("mask");
+          }
+        }
+      }
+    }
+    function basculer2(a, b) {
+      document.getElementById("bod").children[a].classList.remove("mask");
+      document.getElementById("selec").children[b].classList.add("selected");
+      document.getElementById("selec2").children[b].children[0].children[0].classList.remove("mask");
+      document.getElementById("selec2").children[b].children[0].children[1].classList.add("mask");
+      document.getElementById("selec2")
+        .children[b].children[1].classList.remove("mask");
+      for (let i = 5; i < 9; i++) {
+        if (i != a) {
+          document.getElementById("bod").children[i].classList.add("mask");
+        }
+        for (let j = 0; j < 4; j++) {
+          if (j != b) {
+      document.getElementById("selec2").children[j].children[0].children[0].classList.add("mask");
+      document.getElementById("selec2").children[j].children[0].children[1].classList.remove("mask");
+      document.getElementById("selec2")
+        .children[j].children[1].classList.add("mask");
+          }
+        }
+      }
+    }
+   
+    function expand2(a) {
+      document
+        .getElementById("food2")
+        .children[a].classList.add("expand-food-card2");
+      document
+        .getElementById("food2")
+        .children[a].children[0].children[1].children[2].classList.remove("mask");
+
+      document.getElementById("food2").children[
+        a
+      ].children[0].children[3].attributes[1].nodeValue =
+        "color: #ffffff; font-size: 1.8rem; display:none";
+      document.getElementById("food2").children[
+        a
+      ].children[0].children[2].attributes[1].nodeValue =
+        "color: #ffffff; font-size: 1.8rem; transform: rotateZ(90deg)";
+    }
+    function compress2(a) {
+        document
+        .getElementById("food")
+        .children[a].classList.remove("expand-food-card2");
+      document
+        .getElementById("food")
+        .children[a].children[0].children[1].children[2].classList.add("mask");
+
+      document.getElementById("food").children[
+        a
+      ].children[0].children[3].attributes[1].nodeValue =
+        "color: #ffffff; font-size: 1.8rem; transform: rotateZ(90deg)";
+      document.getElementById("food").children[
+        a
+      ].children[0].children[2].attributes[1].nodeValue =
+        "color: #ffffff; font-size: 1.8rem; display:none";
+    }
+  </script>
+</html>
